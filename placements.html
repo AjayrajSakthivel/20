@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Placements at Beyond20 | Oracle Cloud, SAP, AWS & Azure Career Support in Bangalore</title>
+    <meta name="description" content="Beyond20's placement support doesn't end when your course does. Resume building, mock interviews, hiring referrals, and continuous career support for Oracle Cloud, SAP, AWS, Azure & Digital Marketing learners.">
+    <meta name="keywords" content="Beyond20 placements, IT training institute placement Bangalore, Oracle Cloud jobs, SAP jobs Bangalore, AWS jobs, placement support IT courses">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .animate-on-scroll-hidden {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .animate-on-scroll-visible { opacity: 1; transform: translateY(0); }
+
+        /* Hero grid */
+        @keyframes grid-drift {
+            0%   { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(74,102,214,0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74,102,214,0.07) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: grid-drift 10s linear infinite;
+        }
+
+        /* Glow orbs */
+        @keyframes hero-pulse {
+            0%, 100% { opacity: 0.15; transform: scale(1); }
+            50%       { opacity: 0.28; transform: scale(1.06); }
+        }
+        .hero-glow { animation: hero-pulse 7s ease-in-out infinite; }
+
+        /* Float badges */
+        @keyframes badge-float {
+            0%, 100% { transform: translateY(0px); }
+            50%       { transform: translateY(-10px); }
+        }
+
+        /* Number counter pulse */
+        @keyframes stat-enter {
+            from { opacity: 0; transform: translateY(20px) scale(0.9); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Progress bar animation */
+        @keyframes bar-grow {
+            from { width: 0%; }
+            to   { width: var(--target-w); }
+        }
+        .bar-animate { animation: bar-grow 1.4s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+        /* Marquee */
+        @keyframes marquee {
+            0%   { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee { animation: marquee 40s linear infinite; }
+
+        /* Placement card hover */
+        .placement-card {
+            transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s cubic-bezier(0.16,1,0.3,1);
+        }
+        .placement-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 60px rgba(17,8,11,0.10);
+        }
+
+        /* Feature item */
+        .feature-item {
+            border-left: 2px solid rgba(74,102,214,0.18);
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .feature-item:hover {
+            border-color: #4A66D6;
+            background: rgba(74,102,214,0.03);
+        }
+
+        /* Outcome pill */
+        .outcome-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(74,102,214,0.08); color: #4A66D6;
+            border: 1px solid rgba(74,102,214,0.18); border-radius: 999px;
+            padding: 4px 14px; font-size: 11px; font-weight: 600;
+            letter-spacing: 0.04em; text-transform: uppercase;
+        }
+
+        /* Track card */
+        .track-card {
+            border: 1px solid rgba(17,8,11,0.08);
+            transition: background 0.3s, border-color 0.3s;
+        }
+        .track-card:hover { background: rgba(74,102,214,0.04); border-color: rgba(74,102,214,0.25); }
+
+        /* Floating particles */
+        @keyframes particle-drift {
+            0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.6; }
+            33%  { transform: translateY(-20px) translateX(8px) rotate(5deg); opacity: 0.8; }
+            66%  { transform: translateY(-8px) translateX(-5px) rotate(-3deg); opacity: 0.5; }
+            100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.6; }
+        }
+        .particle { animation: particle-drift linear infinite; }
+
+        /* CTA button pulse */
+        @keyframes cta-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(74,102,214,0.4); }
+            50%       { box-shadow: 0 0 0 12px rgba(74,102,214,0); }
+        }
+        .cta-pulse { animation: cta-pulse 2.5s ease-in-out infinite; }
+    </style>
+
+    <style type="text/tailwindcss">@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}</style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+        important: '#app-root',
+        theme: {
+            extend: {
+                colors: {
+                    'brand-bg': '#F7F6F5',
+                    'brand-text': '#11080B',
+                    'brand-accent': '#4A66D6',
+                    'brand-dark': '#11080B',
+                    'brand-light': '#F7F6F5',
+                    'brand-card-dark': '#24151B',
+                    'brand-card-blue': '#D6E0EA',
+                    'brand-card-pink': '#E8E1E6',
+                    'brand-card-yellow': '#F6EFE4',
+                    'brand-card-gray': '#E5E3E1',
+                    'brand-card-green': '#DEE6E1',
+                },
+                fontFamily: {
+                    'primary': ['"Fraunces"', 'serif'],
+                    'secondary': ['"Plus Jakarta Sans"', 'sans-serif'],
+                    'mono': ['"Space Mono"', 'monospace'],
+                },
+                borderRadius: {
+                    'xl': '20px',
+                    '2xl': '32px',
+                },
+                animation: {
+                    'marquee': 'marquee 40s linear infinite',
+                },
+                keyframes: {
+                    marquee: {
+                        '0%': { transform: 'translateX(0%)' },
+                        '100%': { transform: 'translateX(-100%)' },
+                    },
+                }
+            },
+        },
+        plugins: [],
+    }</script>
+</head>
+
+<body id="app-root">
+<div class="font-secondary bg-brand-bg text-brand-text overflow-x-hidden min-h-screen flex flex-col w-full relative antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- ====== NAVBAR ====== -->
+    <header class="fixed top-0 left-0 right-0 z-50 pointer-events-none px-4 md:px-8 pt-4">
+        <nav class="bg-white rounded-b-[20px] rounded-t-[20px] shadow-sm px-6 py-3 flex items-center justify-between pointer-events-auto max-w-[1376px] mx-auto border border-gray-100 transition-all duration-300">
+            <div class="flex items-center gap-12">
+                <a href="home.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img src="logo(1).png" alt="Beyond20" class="h-8 md:h-10 w-auto">
+                    <span class="font-primary text-2xl font-medium tracking-tight">Beyond<span class="text-blue-600">20</span></span>
+                </a>
+                <div class="hidden lg:flex items-center gap-6">
+                    <a href="courses.html" class="text-sm font-medium hover:text-brand-accent transition">Courses</a>
+                    <a href="faculty.html" class="text-sm font-medium hover:text-brand-accent transition">Faculty</a>
+                    <a href="placements.html" class="text-sm font-medium text-brand-accent transition">Placements</a>
+                    <a href="home.html#insights" class="text-sm font-medium hover:text-brand-accent transition">Blog</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden md:block text-sm font-medium hover:text-brand-accent transition px-4 py-2">Student Login</a>
+                <a href="#cta" class="hidden lg:inline-flex bg-brand-dark text-brand-light rounded-full px-5 py-2.5 text-sm font-medium hover:bg-opacity-90 transition">Book Free Demo</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-dark hover:text-brand-accent transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-4 right-4 mt-2 bg-white rounded-[20px] shadow-xl border border-gray-100 p-6 flex-col gap-4 pointer-events-auto">
+            <a href="courses.html" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Courses</a>
+            <a href="faculty.html" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Faculty</a>
+            <a href="placements.html" class="mobile-link text-lg font-medium text-brand-accent transition">Placements</a>
+            <a href="home.html#insights" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Blog</a>
+            <hr class="border-gray-100 my-2">
+            <a href="#" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Student Login</a>
+            <a href="#cta" class="mobile-link bg-brand-dark text-brand-light rounded-full px-5 py-3 text-center text-sm font-medium hover:bg-opacity-90 transition mt-2">Book Free Demo</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- ====== HERO ====== -->
+        <section class="relative bg-brand-dark text-brand-light overflow-hidden min-h-[85vh] flex flex-col justify-center pt-28 md:pt-36 pb-0">
+
+            <!-- Animated grid -->
+            <div class="hero-grid absolute inset-0 pointer-events-none"></div>
+
+            <!-- Glow orbs -->
+            <div class="hero-glow absolute top-[-15%] left-[-8%] w-[700px] h-[700px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#4A66D6 0%,transparent 65%);"></div>
+            <div class="hero-glow absolute bottom-[-25%] right-[-5%] w-[500px] h-[500px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#22C55E 0%,transparent 65%);animation-delay:4s;"></div>
+            <div class="hero-glow absolute top-[40%] right-[20%] w-[300px] h-[300px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#7B45C4 0%,transparent 70%);animation-delay:2s;"></div>
+
+            <!-- Floating background Beyond20 logos -->
+            <div class="hidden md:flex absolute top-[35%] left-[3%] z-0 pointer-events-none opacity-80 w-24" style="animation: badge-float 6s ease-in-out infinite 0.5s;">
+                <img src="logo.png" class="w-full h-auto object-contain rotate-[-10deg]" alt="">
+            </div>
+            <div class="hidden md:flex absolute bottom-[25%] left-[6%] z-0 pointer-events-none opacity-75 w-28" style="animation: badge-float 5s ease-in-out infinite 1s;">
+                <img src="logo.png" class="w-full h-auto object-contain rotate-[15deg]" alt="">
+            </div>
+            <div class="hidden lg:flex absolute top-[30%] right-[3%] z-0 pointer-events-none opacity-85 w-24" style="animation: badge-float 5.5s ease-in-out infinite 2s;">
+                <img src="logo.png" class="w-full h-auto object-contain rotate-[12deg]" alt="">
+            </div>
+            <div class="hidden lg:flex absolute bottom-[30%] right-[6%] z-0 pointer-events-none opacity-70 w-20" style="animation: badge-float 4.5s ease-in-out infinite 0.8s;">
+                <img src="logo.png" class="w-full h-auto object-contain rotate-[-15deg]" alt="">
+            </div>
+
+            <!-- Floating stat badges -->
+            <div class="hidden md:flex absolute top-[18%] left-[6%] z-10 pointer-events-none" style="animation: badge-float 5s ease-in-out infinite 0.3s;">
+                <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 flex items-center gap-3 shadow-xl">
+                    <div class="w-10 h-10 rounded-xl bg-green-500/20 border border-green-400/30 flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <div class="text-white text-sm font-bold">16+ Placed</div>
+                        <div class="text-white/50 text-xs">across all tracks</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:flex absolute top-[22%] right-[6%] z-10 pointer-events-none" style="animation: badge-float 4.5s ease-in-out infinite 1s;">
+                <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 flex items-center gap-3 shadow-xl">
+                    <div class="w-10 h-10 rounded-xl bg-brand-accent/20 border border-brand-accent/30 flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+                    </div>
+                    <div>
+                        <div class="text-white text-sm font-bold">20+ Partners</div>
+                        <div class="text-white/50 text-xs">active hiring network</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden xl:flex absolute bottom-[22%] left-[7%] z-10 pointer-events-none" style="animation: badge-float 5.8s ease-in-out infinite 1.8s;">
+                <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 flex items-center gap-3 shadow-xl">
+                    <div class="w-10 h-10 rounded-xl bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <div>
+                        <div class="text-white text-sm font-bold">2-Week Guarantee</div>
+                        <div class="text-white/50 text-xs">first interview call</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero text -->
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 relative z-10 py-10 text-center" data-animation-on-scroll="">
+                <div class="outcome-pill mb-8 inline-flex">
+                    <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                    Placement Support — Active
+                </div>
+                <h1 class="font-primary text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight mx-auto leading-[1.05] font-light max-w-[900px]">
+                    Training That Doesn't Stop Until <span class="italic text-brand-accent">You're Placed</span>
+                </h1>
+                <p class="mt-6 md:mt-8 text-brand-light/70 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed">
+                    A certificate tells an employer you sat through a course. An offer letter tells them you can actually do the job. That gap — between finishing a course and getting hired — is where most institutes stop. At Beyond20, it's where we start paying the closest attention.
+                </p>
+                <div class="mt-10 flex flex-wrap gap-4 justify-center">
+                    <a href="#placement-program" class="bg-brand-accent text-white px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition cta-pulse">
+                        See What's Included →
+                    </a>
+                    <a href="#cta" class="bg-white/10 border border-white/20 text-brand-light px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-white/15 transition backdrop-blur-sm">
+                        Book Free Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats bar -->
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 relative z-10 pb-0 w-full mt-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 rounded-t-2xl overflow-hidden" data-animation-on-scroll="">
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">100%</span>
+                        <span class="text-brand-light/50 text-sm font-medium">Placement Rate*</span>
+                    </div>
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">16+</span>
+                        <span class="text-brand-light/50 text-sm font-medium">Learners Placed</span>
+                    </div>
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">20+</span>
+                        <span class="text-brand-light/50 text-sm font-medium">Hiring Companies</span>
+                    </div>
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">2wk</span>
+                        <span class="text-brand-light/50 text-sm font-medium">First Interview Call</span>
+                    </div>
+                </div>
+                <p class="text-white/25 text-xs mt-3 px-1">*Among learners who complete the full course and placement program.</p>
+            </div>
+
+        </section>
+
+        <!-- ====== WHY PLACEMENT IS THE REAL PRODUCT ====== -->
+        <section class="py-24 md:py-32" data-animation-on-scroll="">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                    <div>
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text/40 mb-6">Section 01 — Philosophy</div>
+                        <h2 class="font-primary text-4xl md:text-5xl font-light tracking-tight leading-[1.1] mb-6">
+                            Most institutes sell a course.<br>
+                            <span class="italic text-brand-accent">Beyond20 sells an outcome.</span>
+                        </h2>
+                        <div class="space-y-5 text-brand-text/70 text-base md:text-lg leading-relaxed">
+                            <p>Anyone can teach you what a dropdown menu in Oracle Fusion does, or how to configure a pricing procedure in SAP SD. That's the easy part — and it's the part every institute in Bangalore already claims to offer.</p>
+                            <p>The harder, more valuable part is what happens after: can you explain your project in an interview under pressure? Can you answer a curveball technical question without freezing? Do you know how to position four years of unrelated work experience as a strength instead of a gap?</p>
+                            <p>That's the actual skill gap between <strong class="text-brand-text">"trained"</strong> and <strong class="text-brand-text">"hired"</strong> — and it's the gap Beyond20 was built to close.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="placement-card bg-brand-card-yellow rounded-2xl p-6 flex flex-col gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-dark/8 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-dark/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                            </div>
+                            <h3 class="font-primary text-lg font-light leading-snug">Resume that gets shortlisted</h3>
+                            <p class="text-brand-text/60 text-sm">Role-specific keywords that pass ATS filters and impress hiring managers.</p>
+                        </div>
+                        <div class="placement-card bg-brand-card-blue rounded-2xl p-6 flex flex-col gap-3 mt-8">
+                            <div class="w-10 h-10 rounded-xl bg-brand-dark/8 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-dark/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+                            </div>
+                            <h3 class="font-primary text-lg font-light leading-snug">Interviews you're ready for</h3>
+                            <p class="text-brand-text/60 text-sm">Mock sessions with real trainers covering technical and HR rounds.</p>
+                        </div>
+                        <div class="placement-card bg-brand-card-green rounded-2xl p-6 flex flex-col gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-dark/8 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-dark/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                            </div>
+                            <h3 class="font-primary text-lg font-light leading-snug">Direct referrals to employers</h3>
+                            <p class="text-brand-text/60 text-sm">Introductions into our active hiring company network across 5 tracks.</p>
+                        </div>
+                        <div class="placement-card bg-brand-card-pink rounded-2xl p-6 flex flex-col gap-3 mt-8">
+                            <div class="w-10 h-10 rounded-xl bg-brand-dark/8 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-dark/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                            </div>
+                            <h3 class="font-primary text-lg font-light leading-snug">Confidence for the room</h3>
+                            <p class="text-brand-text/60 text-sm">Communication coaching for candidates who are strong technically.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== WHAT'S INCLUDED ====== -->
+        <section id="placement-program" class="py-24 md:py-32 bg-brand-dark text-brand-light" data-animation-on-scroll="">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8">
+                <div class="mb-16">
+                    <div class="font-mono text-xs tracking-wider uppercase text-brand-light/40 mb-4">Section 02 — The Program</div>
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <h2 class="font-primary text-4xl md:text-5xl font-light tracking-tight leading-[1.1] max-w-xl">
+                            What's Included in <span class="italic text-brand-accent">Every Placement Program</span>
+                        </h2>
+                        <p class="text-brand-light/50 max-w-xs text-sm leading-relaxed">
+                            Not a checklist tacked on at the end — a parallel track that runs alongside your training from week one.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/8 rounded-2xl overflow-hidden">
+                    <!-- Feature 1 -->
+                    <div class="bg-brand-card-dark p-8 flex gap-5 feature-item border-l-0 hover:bg-white/5 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-accent/15 border border-brand-accent/20 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-primary text-xl font-light text-brand-light mb-2">Resume Building</h3>
+                            <p class="text-brand-light/50 text-sm leading-relaxed">Role-specific, keyword-optimized, reviewed by placement staff — not a template generator. Built around what hiring managers actually search for.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-brand-card-dark p-8 flex gap-5 feature-item border-l-0 hover:bg-white/5 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-primary text-xl font-light text-brand-light mb-2">LinkedIn Profile Optimization</h3>
+                            <p class="text-brand-light/50 text-sm leading-relaxed">Headline, summary, and skills sections built to get found by recruiters. We know how the LinkedIn algorithm surfaces candidates to hiring managers.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-brand-card-dark p-8 flex gap-5 feature-item border-l-0 hover:bg-white/5 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/15 border border-purple-500/20 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-primary text-xl font-light text-brand-light mb-2">Mock Technical Interviews</h3>
+                            <p class="text-brand-light/50 text-sm leading-relaxed">Conducted by trainers with real hands-on experience in your track. Not a generic Q&A — real scenarios from real Oracle, SAP, AWS, and Azure projects.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-brand-card-dark p-8 flex gap-5 feature-item border-l-0 hover:bg-white/5 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-green-500/15 border border-green-500/20 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-primary text-xl font-light text-brand-light mb-2">Mock HR Interviews</h3>
+                            <p class="text-brand-light/50 text-sm leading-relaxed">Communication, salary negotiation, and behavioral question preparation. Walk into your HR round knowing exactly how to handle every curveball.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="bg-brand-card-dark p-8 flex gap-5 feature-item border-l-0 hover:bg-white/5 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/15 border border-yellow-500/20 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-primary text-xl font-light text-brand-light mb-2">Role-Specific Question Banks</h3>
+                            <p class="text-brand-light/50 text-sm leading-relaxed">Curated interview Q&A banks for Oracle Cloud, SAP, AWS, Azure, and Digital Marketing roles — built from real interview experiences, not guesswork.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="bg-brand-card-dark p-8 flex gap-5 feature-item border-l-0 hover:bg-white/5 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/15 border border-red-500/20 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-primary text-xl font-light text-brand-light mb-2">Direct Referrals</h3>
+                            <p class="text-brand-light/50 text-sm leading-relaxed">Introductions into our hiring company network across the Oracle Cloud, SAP, AWS, Azure, and Digital Marketing ecosystems in Bangalore and beyond.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 7 -->
+                    <div class="bg-brand-card-dark p-8 flex gap-5 feature-item border-l-0 hover:bg-white/5 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-pink-500/15 border border-pink-500/20 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-primary text-xl font-light text-brand-light mb-2">Soft Skills & Communication Coaching</h3>
+                            <p class="text-brand-light/50 text-sm leading-relaxed">For candidates who are technically strong but need interview-room confidence. We bridge the gap between knowing the answer and delivering it well.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 8 -->
+                    <div class="bg-brand-card-dark p-8 flex gap-5 feature-item border-l-0 hover:bg-white/5 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/15 border border-teal-500/20 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-primary text-xl font-light text-brand-light mb-2">Post-Placement Check-ins</h3>
+                            <p class="text-brand-light/50 text-sm leading-relaxed">Our support doesn't end the day you sign the offer letter. Ongoing access to the alumni network and continued career guidance after placement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== OUTCOMES / STATS ====== -->
+        <section class="py-24 md:py-32" data-animation-on-scroll="">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8">
+                <div class="font-mono text-xs tracking-wider uppercase text-brand-text/40 mb-4">Section 03 — Outcomes</div>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+                    <h2 class="font-primary text-4xl md:text-5xl font-light tracking-tight leading-[1.1] max-w-xl">
+                        Placement Outcomes That <span class="italic text-brand-accent">Speak for Themselves</span>
+                    </h2>
+                    <p class="text-brand-text/50 max-w-xs text-sm leading-relaxed">Numbers from learners who completed the full course and participated in the placement program.</p>
+                </div>
+
+                <!-- Big stat cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="placement-card bg-brand-card-dark text-brand-light rounded-2xl p-10 flex flex-col gap-4 relative overflow-hidden">
+                        <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(circle at top left, rgba(74,102,214,0.18) 0%, transparent 60%);"></div>
+                        <div class="outcome-pill relative z-10" style="color:#22C55E;background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.25);">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                            Placement Rate
+                        </div>
+                        <span class="font-primary text-7xl md:text-8xl font-light relative z-10">100%</span>
+                        <p class="text-brand-light/50 text-sm leading-relaxed relative z-10 max-w-sm">Among learners who complete the full course and actively participate in the placement program — from resume to referral.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="placement-card bg-brand-card-yellow rounded-2xl p-8 flex flex-col gap-3">
+                            <div class="font-mono text-xs text-brand-text/40 uppercase tracking-wider">Interview Speed</div>
+                            <span class="font-primary text-5xl font-light">2wk</span>
+                            <p class="text-brand-text/60 text-sm">Average time to first interview call after course completion</p>
+                        </div>
+                        <div class="placement-card bg-brand-card-blue rounded-2xl p-8 flex flex-col gap-3">
+                            <div class="font-mono text-xs text-brand-text/40 uppercase tracking-wider">Hiring Network</div>
+                            <span class="font-primary text-5xl font-light">20+</span>
+                            <p class="text-brand-text/60 text-sm">Active hiring companies across Oracle Cloud, SAP, AWS & Azure</p>
+                        </div>
+                        <div class="placement-card bg-brand-card-green rounded-2xl p-8 flex flex-col gap-3">
+                            <div class="font-mono text-xs text-brand-text/40 uppercase tracking-wider">Total Placed</div>
+                            <span class="font-primary text-5xl font-light">16+</span>
+                            <p class="text-brand-text/60 text-sm">Learners placed across all five training tracks to date</p>
+                        </div>
+                        <div class="placement-card bg-brand-card-pink rounded-2xl p-8 flex flex-col gap-3">
+                            <div class="font-mono text-xs text-brand-text/40 uppercase tracking-wider">Training Tracks</div>
+                            <span class="font-primary text-5xl font-light">5</span>
+                            <p class="text-brand-text/60 text-sm">Oracle, SAP, AWS, Azure, Digital Marketing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track placement breakdown -->
+                <div class="bg-brand-card-gray rounded-2xl p-8 md:p-12">
+                    <h3 class="font-primary text-2xl font-light mb-8">Hiring Ecosystem — Where Our Learners Go</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="track-card bg-white rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#F80000;">
+                                    <span class="text-white text-xs font-bold">O</span>
+                                </div>
+                                <span class="font-semibold text-sm">Oracle Cloud Fusion</span>
+                            </div>
+                            <div class="text-brand-text/60 text-sm leading-relaxed">SCM, Financials, HCM modules. Roles in implementation consulting, functional analysis, and support.</div>
+                        </div>
+                        <div class="track-card bg-white rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden bg-white border border-gray-100">
+                                    <img src="sap-logo.png" class="w-6 h-auto object-contain" alt="SAP">
+                                </div>
+                                <span class="font-semibold text-sm">SAP MM / S4HANA</span>
+                            </div>
+                            <div class="text-brand-text/60 text-sm leading-relaxed">Materials management, procurement, and inventory. Roles in SAP consulting, ERP support, and system configuration.</div>
+                        </div>
+                        <div class="track-card bg-white rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden bg-white border border-gray-100">
+                                    <img src="aws-logo.png" class="w-6 h-auto object-contain" alt="AWS">
+                                </div>
+                                <span class="font-semibold text-sm">AWS Cloud</span>
+                            </div>
+                            <div class="text-brand-text/60 text-sm leading-relaxed">Cloud infrastructure and DevOps. Roles in cloud engineering, solutions architecture, and DevOps engineering.</div>
+                        </div>
+                        <div class="track-card bg-white rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden bg-white border border-gray-100">
+                                    <img src="azure-logo.svg" class="w-6 h-auto object-contain" alt="Azure">
+                                </div>
+                                <span class="font-semibold text-sm">Microsoft Azure</span>
+                            </div>
+                            <div class="text-brand-text/60 text-sm leading-relaxed">Azure infrastructure, AD, and hybrid cloud. Roles in Azure administration, cloud consulting, and enterprise IT.</div>
+                        </div>
+                        <div class="track-card bg-white rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-gradient-to-br from-blue-500 to-pink-500">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                                </div>
+                                <span class="font-semibold text-sm">Digital Marketing</span>
+                            </div>
+                            <div class="text-brand-text/60 text-sm leading-relaxed">SEO, Meta/Google Ads, and AI automation. Roles in digital marketing management, performance marketing, and growth.</div>
+                        </div>
+                        <div class="track-card bg-brand-accent rounded-xl p-6 text-white">
+                            <div class="font-primary text-2xl font-light mb-3">Ready to join them?</div>
+                            <p class="text-white/70 text-sm mb-6">Book a free demo session and find out which track aligns with your goals.</p>
+                            <a href="#cta" class="bg-white text-brand-accent rounded-full px-5 py-2.5 text-sm font-semibold hover:bg-white/90 transition inline-block">Book Free Demo →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== CTA SECTION ====== -->
+        <section id="cta" class="py-24 md:py-32 bg-brand-dark text-brand-light relative overflow-hidden" data-animation-on-scroll="">
+            <div class="hero-glow absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#4A66D6 0%,transparent 65%);"></div>
+            <div class="hero-glow absolute bottom-[-20%] left-[-5%] w-[400px] h-[400px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#22C55E 0%,transparent 65%);animation-delay:3s;"></div>
+            <div class="hero-grid absolute inset-0 pointer-events-none"></div>
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 relative z-10">
+                <div class="max-w-2xl mx-auto text-center">
+                    <div class="outcome-pill mb-8 inline-flex">
+                        <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                        Enrollments Open
+                    </div>
+                    <h2 class="font-primary text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] mb-6">
+                        Your next job starts with one <span class="italic text-brand-accent">free conversation</span>
+                    </h2>
+                    <p class="text-brand-light/60 text-base md:text-lg mb-10 leading-relaxed">
+                        Book a free demo session. We'll walk you through the course that fits your goals and give you an honest picture of where placement support can take you.
+                    </p>
+                    <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-6">
+                        <input type="text" placeholder="Your name" class="flex-1 bg-white/10 border border-white/20 text-brand-light placeholder:text-white/30 rounded-full px-5 py-3 text-sm focus:outline-none focus:border-brand-accent transition backdrop-blur-sm">
+                        <input type="tel" placeholder="Phone number" class="flex-1 bg-white/10 border border-white/20 text-brand-light placeholder:text-white/30 rounded-full px-5 py-3 text-sm focus:outline-none focus:border-brand-accent transition backdrop-blur-sm">
+                    </form>
+                    <a href="#" class="bg-brand-accent text-white px-10 py-4 rounded-full text-sm font-semibold hover:bg-opacity-90 transition inline-block cta-pulse">
+                        Book Your Free Demo Session →
+                    </a>
+                    <p class="text-brand-light/30 text-xs mt-6">No commitment. No sales pressure. Just clarity on your next step.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-brand-bg pt-32 pb-12 relative z-10 border-t border-brand-dark/5 mt-0">
+        <div class="max-w-[1376px] mx-auto px-6 md:px-8 flex flex-col gap-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-4 flex flex-col gap-8">
+                    <h2 class="font-primary text-3xl md:text-4xl font-light tracking-tight">Stay connected with what actually matters</h2>
+                    <div class="relative w-full max-w-sm mt-4 group">
+                        <input type="email" placeholder="Subscribe to newsletter"
+                            class="w-full bg-transparent border-b border-brand-dark/20 py-3 pr-12 focus:outline-none focus:border-brand-dark transition placeholder:text-brand-dark/40 font-medium">
+                        <button class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-brand-bg group-hover:bg-brand-dark group-hover:text-white rounded-full flex items-center justify-center transition-colors border border-brand-dark/10 group-hover:border-brand-dark">→</button>
+                    </div>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-12 text-lg font-medium">
+                    <div class="flex flex-col gap-4">
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text mb-2 opacity-50">Beyond20</div>
+                        <a href="courses.html" class="hover:text-brand-accent transition">Courses</a>
+                        <a href="faculty.html" class="hover:text-brand-accent transition">Faculty</a>
+                        <a href="placements.html" class="hover:text-brand-accent transition">Placements</a>
+                        <a href="home.html#insights" class="hover:text-brand-accent transition">Blog</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text mb-2 opacity-50">About</div>
+                        <a href="#" class="hover:text-brand-accent transition">Our Story</a>
+                        <a href="home.html#insights" class="hover:text-brand-accent transition">Blog</a>
+                        <a href="#" class="hover:text-brand-accent transition">Careers</a>
+                        <a href="#cta" class="hover:text-brand-accent transition">Contact</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text mb-2 opacity-50">More</div>
+                        <a href="#" class="hover:text-brand-accent transition">Student Login</a>
+                        <a href="#cta" class="hover:text-brand-accent transition">Enroll Now</a>
+                        <a href="#" class="hover:text-brand-accent transition">Legal</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center border-t border-brand-dark/10 pt-16">
+                <div class="flex overflow-hidden w-full gap-8 opacity-[0.08] pointer-events-none select-none mb-16">
+                    <div class="flex min-w-full shrink-0 animate-marquee gap-8">
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                    </div>
+                    <div class="flex min-w-full shrink-0 animate-marquee gap-8">
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-8 text-sm text-brand-text/80 font-medium">
+                    <p class="max-w-2xl leading-relaxed">Beyond20 is a training institute based in Bangalore, India, offering Oracle Cloud, SAP, AWS, Azure, and Digital Marketing training. Placement statistics are updated periodically — please confirm current figures with our admissions team before enrolling.</p>
+                    <div class="flex flex-col items-start md:items-end gap-3 shrink-0">
+                        <div>© 2026 Beyond20. All rights reserved.</div>
+                        <div class="flex gap-6 text-brand-text/60">
+                            <a href="#" class="hover:text-brand-text transition">Refund Policy</a>
+                            <a href="#" class="hover:text-brand-text transition">Terms</a>
+                            <a href="#" class="hover:text-brand-text transition">Privacy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-4 bg-brand-dark text-brand-light px-2 py-2 pl-6 rounded-full shadow-2xl border border-white/10 pointer-events-auto">
+        <span class="text-sm font-medium opacity-90 hidden md:block">Ready to skill up?</span>
+        <a href="#cta" class="bg-brand-bg text-brand-dark px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white transition flex items-center gap-2">
+            Book Free Demo <span class="text-brand-accent">→</span>
+        </a>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+            el.classList.add('animate-on-scroll-hidden');
+            observer.observe(el);
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                });
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

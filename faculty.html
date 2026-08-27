@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Meet Our Trainers | Oracle Cloud &amp; SAP Training Faculty | Beyond20</title>
+    <meta name="description" content="Meet the Oracle Cloud and SAP trainers at Beyond20 — practitioners who bring real project experience, Agile certification, and cross-platform expertise into the classroom.">
+    <meta name="keywords" content="Beyond20 trainers, Oracle Cloud trainer Bangalore, SAP trainer Bangalore, Oracle SAP training faculty">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .animate-on-scroll-hidden {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .animate-on-scroll-visible { opacity: 1; transform: translateY(0); }
+
+        /* Hero grid */
+        @keyframes grid-drift {
+            0%   { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(74,102,214,0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74,102,214,0.07) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: grid-drift 10s linear infinite;
+        }
+
+        /* Glow orbs */
+        @keyframes hero-pulse {
+            0%, 100% { opacity: 0.15; transform: scale(1); }
+            50%       { opacity: 0.28; transform: scale(1.06); }
+        }
+        .hero-glow { animation: hero-pulse 7s ease-in-out infinite; }
+
+        /* Float badges */
+        @keyframes badge-float {
+            0%, 100% { transform: translateY(0px); }
+            50%       { transform: translateY(-10px); }
+        }
+        .badge-f1 { animation: badge-float 4.2s ease-in-out infinite; }
+        .badge-f2 { animation: badge-float 5.8s ease-in-out infinite 0.8s; }
+        .badge-f3 { animation: badge-float 4.8s ease-in-out infinite 1.6s; }
+
+        /* Trainer card hover */
+        .trainer-card {
+            transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s cubic-bezier(0.16,1,0.3,1);
+        }
+        .trainer-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 60px rgba(17,8,11,0.10);
+        }
+
+        /* Avatar ring */
+        .avatar-ring {
+            background: linear-gradient(135deg, #4A66D6, #7B45C4, #4A66D6);
+            padding: 3px;
+            border-radius: 50%;
+        }
+
+        /* Speciality tag */
+        .spec-tag {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: rgba(74,102,214,0.08); color: #4A66D6;
+            border: 1px solid rgba(74,102,214,0.18); border-radius: 999px;
+            padding: 3px 12px; font-size: 11px; font-weight: 600;
+            letter-spacing: 0.04em; text-transform: uppercase;
+        }
+
+        /* Philosophy tick */
+        .philosophy-item {
+            border-left: 2px solid rgba(74,102,214,0.2);
+            transition: border-color 0.3s;
+        }
+        .philosophy-item:hover { border-color: #4A66D6; }
+
+        /* Marquee */
+        @keyframes marquee {
+            0%   { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee { animation: marquee 40s linear infinite; }
+
+        /* LinkedIn hover */
+        .li-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #0A66C2; color: white;
+            border-radius: 999px; padding: 6px 16px;
+            font-size: 12px; font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+            text-decoration: none;
+        }
+        .li-btn:hover { background: #004182; transform: scale(1.04); }
+
+        /* Other tracks card */
+        .track-card {
+            border: 1px solid rgba(17,8,11,0.08);
+            transition: background 0.3s, border-color 0.3s;
+        }
+        .track-card:hover { background: rgba(74,102,214,0.04); border-color: rgba(74,102,214,0.25); }
+    </style>
+
+    <style type="text/tailwindcss">@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}</style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+        important: '#app-root',
+        theme: {
+            extend: {
+                colors: {
+                    'brand-bg': '#F7F6F5',
+                    'brand-text': '#11080B',
+                    'brand-accent': '#4A66D6',
+                    'brand-dark': '#11080B',
+                    'brand-light': '#F7F6F5',
+                    'brand-card-dark': '#24151B',
+                    'brand-card-blue': '#D6E0EA',
+                    'brand-card-pink': '#E8E1E6',
+                    'brand-card-yellow': '#F6EFE4',
+                    'brand-card-gray': '#E5E3E1',
+                    'brand-card-green': '#DEE6E1',
+                },
+                fontFamily: {
+                    'primary': ['"Fraunces"', 'serif'],
+                    'secondary': ['"Plus Jakarta Sans"', 'sans-serif'],
+                    'mono': ['"Space Mono"', 'monospace'],
+                },
+                borderRadius: {
+                    'xl': '20px',
+                    '2xl': '32px',
+                },
+                animation: {
+                    'marquee': 'marquee 40s linear infinite',
+                },
+                keyframes: {
+                    marquee: {
+                        '0%': { transform: 'translateX(0%)' },
+                        '100%': { transform: 'translateX(-100%)' },
+                    },
+                }
+            },
+        },
+        plugins: [],
+    }</script>
+</head>
+
+<body id="app-root">
+<div class="font-secondary bg-brand-bg text-brand-text overflow-x-hidden min-h-screen flex flex-col w-full relative antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- ====== NAVBAR ====== -->
+    <header class="fixed top-0 left-0 right-0 z-50 pointer-events-none px-4 md:px-8 pt-4">
+        <nav class="bg-white rounded-b-[20px] rounded-t-[20px] shadow-sm px-6 py-3 flex items-center justify-between pointer-events-auto max-w-[1376px] mx-auto border border-gray-100 transition-all duration-300">
+            <div class="flex items-center gap-12">
+                <a href="home.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img src="logo(1).png" alt="Beyond20" class="h-8 md:h-10 w-auto">
+                    <span class="font-primary text-2xl font-medium tracking-tight">Beyond<span class="text-blue-600">20</span></span>
+                </a>
+                <div class="hidden lg:flex items-center gap-6">
+                    <a href="courses.html" class="text-sm font-medium hover:text-brand-accent transition">Courses</a>
+                    <a href="faculty.html" class="text-sm font-medium text-brand-accent transition">Faculty</a>
+                    <a href="placements.html" class="text-sm font-medium hover:text-brand-accent transition">Placements</a>
+                    <a href="home.html#insights" class="text-sm font-medium hover:text-brand-accent transition">Blog</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden md:block text-sm font-medium hover:text-brand-accent transition px-4 py-2">Student Login</a>
+                <a href="#cta" class="hidden lg:inline-flex bg-brand-dark text-brand-light rounded-full px-5 py-2.5 text-sm font-medium hover:bg-opacity-90 transition">Book Free Demo</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-dark hover:text-brand-accent transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-4 right-4 mt-2 bg-white rounded-[20px] shadow-xl border border-gray-100 p-6 flex-col gap-4 pointer-events-auto">
+            <a href="courses.html" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Courses</a>
+            <a href="faculty.html" class="mobile-link text-lg font-medium text-brand-accent transition">Faculty</a>
+            <a href="placements.html" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Placements</a>
+            <a href="home.html#insights" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Blog</a>
+            <hr class="border-gray-100 my-2">
+            <a href="#" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Student Login</a>
+            <a href="#cta" class="mobile-link bg-brand-dark text-brand-light rounded-full px-5 py-3 text-center text-sm font-medium hover:bg-opacity-90 transition mt-2">Book Free Demo</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- ====== HERO ====== -->
+        <section class="relative bg-brand-dark text-brand-light overflow-hidden min-h-[80vh] flex flex-col justify-center pt-28 md:pt-36 pb-0">
+
+            <!-- Animated grid -->
+            <div class="hero-grid absolute inset-0 pointer-events-none"></div>
+
+            <!-- Glow orbs -->
+            <div class="hero-glow absolute top-[-15%] left-[-8%] w-[700px] h-[700px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#4A66D6 0%,transparent 65%);"></div>
+            <div class="hero-glow absolute bottom-[-25%] right-[-5%] w-[500px] h-[500px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#7B45C4 0%,transparent 65%);animation-delay:4s;"></div>
+
+            <!-- Floating background Beyond20 logos -->
+            <div class="hidden md:flex absolute top-[35%] left-[3%] z-0 pointer-events-none opacity-80 w-24" style="animation: badge-float 6s ease-in-out infinite 0.5s;">
+                <img src="logo.png" class="w-full h-auto object-contain rotate-[-10deg]" alt="">
+            </div>
+            <div class="hidden md:flex absolute bottom-[25%] left-[6%] z-0 pointer-events-none opacity-75 w-28" style="animation: badge-float 5s ease-in-out infinite 1s;">
+                <img src="logo.png" class="w-full h-auto object-contain rotate-[15deg]" alt="">
+            </div>
+            <div class="hidden lg:flex absolute top-[30%] right-[3%] z-0 pointer-events-none opacity-85 w-24" style="animation: badge-float 5.5s ease-in-out infinite 2s;">
+                <img src="logo.png" class="w-full h-auto object-contain rotate-[12deg]" alt="">
+            </div>
+            <div class="hidden lg:flex absolute bottom-[30%] right-[6%] z-0 pointer-events-none opacity-70 w-20" style="animation: badge-float 4.5s ease-in-out infinite 0.8s;">
+                <img src="logo.png" class="w-full h-auto object-contain rotate-[-15deg]" alt="">
+            </div>
+
+            <!-- Floating brand logos (better spaced) -->
+            <div class="hidden md:flex absolute top-[15%] left-[6%] z-10 pointer-events-none w-20 h-16 rounded-2xl bg-white shadow-xl items-center justify-center p-3 border border-gray-100" style="animation: badge-float 5s ease-in-out infinite 0.2s;">
+                <img src="oracle-logo.png" class="w-full h-full object-contain" alt="Oracle">
+            </div>
+            <div class="hidden xl:flex absolute top-[45%] left-[4%] z-10 pointer-events-none w-16 h-16 rounded-2xl bg-white shadow-xl items-center justify-center p-3.5 border border-gray-100" style="animation: badge-float 4.2s ease-in-out infinite 1.2s;">
+                <svg viewBox="0 0 24 24" class="w-full h-full" fill="none"><circle cx="12" cy="12" r="12" fill="white"/><path d="M21.5 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.3c-.2 1.2-.9 2.2-2 2.8v2.3h3.2c1.9-1.7 2.9-4.3 2.9-6.8h.1z" fill="#4285F4"/><path d="M12 22c2.7 0 4.9-.9 6.5-2.4l-3.2-2.3c-.9.6-2 1-3.3 1-2.5 0-4.7-1.7-5.5-4H3.2v2.4C4.8 19.9 8.1 22 12 22z" fill="#34A853"/><path d="M6.5 14.3c-.2-.6-.3-1.2-.3-1.8 0-.6.1-1.3.3-1.8V8.3H3.2C2.4 9.8 2 11.3 2 13c0 1.7.4 3.2 1.2 4.7l3.3-2.4z" fill="#FBBC05"/><path d="M12 6.6c1.4 0 2.6.5 3.6 1.4l2.7-2.7C16.9 3.9 14.7 3 12 3 8.1 3 4.8 5.1 3.2 8.3l3.3 2.4C7.3 8.3 9.5 6.6 12 6.6z" fill="#EA4335"/></svg>
+            </div>
+            <div class="hidden lg:flex absolute bottom-[15%] left-[8%] z-10 pointer-events-none w-20 h-16 rounded-2xl bg-white shadow-xl items-center justify-center p-3 border border-gray-100" style="animation: badge-float 5.5s ease-in-out infinite 1.5s;">
+                <img src="aws-logo.png" class="w-full h-full object-contain" alt="AWS">
+            </div>
+
+            <div class="hidden md:flex absolute top-[20%] right-[6%] z-10 pointer-events-none w-20 h-16 rounded-2xl bg-white shadow-xl items-center justify-center p-3 border border-gray-100" style="animation: badge-float 4.5s ease-in-out infinite 0.8s;">
+                <img src="sap-logo.png" class="w-full h-full object-contain" alt="SAP">
+            </div>
+            <div class="hidden xl:flex absolute top-[50%] right-[4%] z-10 pointer-events-none w-16 h-16 rounded-2xl bg-white shadow-xl items-center justify-center p-3.5 border border-gray-100" style="animation: badge-float 5.2s ease-in-out infinite 0.5s;">
+                <svg viewBox="0 0 24 24" class="w-full h-full" fill="#0866FF"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </div>
+            <div class="hidden md:flex absolute bottom-[15%] right-[10%] z-10 pointer-events-none w-20 h-16 rounded-2xl bg-white shadow-xl items-center justify-center p-3 border border-gray-100" style="animation: badge-float 4.8s ease-in-out infinite 2s;">
+                <img src="azure-logo.svg" class="w-full h-full object-contain" alt="Azure">
+            </div>
+
+            <!-- Hero text -->
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 relative z-10 py-10" data-animation-on-scroll="">
+                <div class="flex flex-col gap-6 max-w-3xl">
+                    <div class="flex items-center gap-3">
+                        <span class="w-6 h-px bg-brand-accent"></span>
+                        <span class="font-mono text-xs tracking-[0.2em] uppercase text-brand-accent">Core Faculty · Bangalore</span>
+                    </div>
+                    <h1 class="font-primary text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.05]">
+                        Trainers Who've<br>
+                        <span class="italic text-brand-accent">Actually Done</span><br>
+                        the Job
+                    </h1>
+                    <p class="text-brand-light/65 text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
+                        Every Beyond20 trainer works hands-on with the technology they teach — not just presenting it from a slide deck. Real project stories, current best practices, and answers to the questions that only come up when something breaks in production.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-brand-light/70 text-sm font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span>
+                            Practitioner Trainers
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-brand-light/70 text-sm font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-accent inline-block"></span>
+                            Real Project Experience
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-brand-light/70 text-sm font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-yellow-400 inline-block"></span>
+                            Industry Certified
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stat strip -->
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 relative z-10 pb-0">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 rounded-t-2xl overflow-hidden" data-animation-on-scroll="">
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">6</span>
+                        <span class="text-brand-light/50 text-sm font-medium">Core Faculty</span>
+                    </div>
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">5</span>
+                        <span class="text-brand-light/50 text-sm font-medium">Course Tracks</span>
+                    </div>
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">15<span class="text-2xl opacity-50">+</span></span>
+                        <span class="text-brand-light/50 text-sm font-medium">Years Experience</span>
+                    </div>
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">99<span class="text-2xl opacity-50">%</span></span>
+                        <span class="text-brand-light/50 text-sm font-medium">Placement Rate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== INTRO STRIP ====== -->
+        <section class="py-16 md:py-20 border-b border-brand-dark/8" data-animation-on-scroll="">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                    <div>
+                        <span class="font-mono text-xs tracking-[0.2em] uppercase text-brand-text/40 block mb-3">Our Teaching Approach</span>
+                        <h2 class="font-primary text-3xl md:text-4xl lg:text-5xl font-light tracking-tight leading-tight max-w-2xl">Learn From People Who've<br><span class="italic">Actually Sat in the Seat</span></h2>
+                    </div>
+                    <p class="text-brand-text/60 text-base md:text-lg leading-relaxed font-medium max-w-lg">
+                        Labs and live projects come before theory recall — you build it, then we explain why it worked. Doubt-clearing is built into the schedule. Trainers stay reachable after the course for placement-related questions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== CORE FACULTY ====== -->
+        <section class="py-20 md:py-28">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8">
+
+                <div class="mb-14">
+                    <span class="font-mono text-xs tracking-[0.2em] uppercase text-brand-text/40">Core Faculty</span>
+                </div>
+
+                <div class="flex flex-col gap-12">
+
+                    <!-- ── KAVITHA Y N ── -->
+                    <div class="trainer-card rounded-2xl bg-white border border-brand-dark/8 shadow-sm overflow-hidden" data-animation-on-scroll="">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+
+                            <!-- Left panel -->
+                            <div class="lg:col-span-4 bg-gradient-to-br from-brand-card-blue/60 to-brand-bg p-8 md:p-10 flex flex-col gap-6 border-b lg:border-b-0 lg:border-r border-brand-dark/8">
+                                <!-- Avatar -->
+                                <div class="flex items-start gap-5">
+                                    <div class="avatar-ring shrink-0">
+                                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-brand-accent to-indigo-600 flex items-center justify-center text-white font-primary text-2xl font-light">
+                                            K
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-primary text-2xl font-light tracking-tight">Kavitha Y N</h2>
+                                        <p class="text-brand-text/50 text-sm font-medium mt-0.5">Oracle Cloud SCM Trainer</p>
+                                        <a href="https://www.linkedin.com/in/kavitha-y-n-certified-safe%C2%AE-popm-and-oracle-cloud-scm-8ba82920" target="_blank" rel="noopener" class="li-btn mt-3 inline-flex">
+                                            <svg width="12" height="12" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                            LinkedIn
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Certs -->
+                                <div>
+                                    <div class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-3">Certifications</div>
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center gap-2 text-sm font-medium">
+                                            <span class="w-5 h-5 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
+                                                <svg class="w-3 h-3 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                            </span>
+                                            Certified SAFe® POPM
+                                        </div>
+                                        <div class="flex items-center gap-2 text-sm font-medium">
+                                            <span class="w-5 h-5 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
+                                                <svg class="w-3 h-3 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                            </span>
+                                            Oracle Cloud SCM Certified
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Specialises -->
+                                <div>
+                                    <div class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-3">Specialises In</div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="spec-tag">Oracle Cloud SCM</span>
+                                        <span class="spec-tag">Inventory Mgmt</span>
+                                        <span class="spec-tag">Order Management</span>
+                                        <span class="spec-tag">Procurement Cloud</span>
+                                        <span class="spec-tag">Agile Delivery</span>
+                                    </div>
+                                </div>
+
+                                <!-- CTA -->
+                                <a href="#cta" class="mt-2 inline-flex items-center gap-2 bg-brand-dark text-brand-light rounded-full px-5 py-3 text-sm font-semibold hover:bg-opacity-90 transition self-start">
+                                    Book Demo with Kavitha <span class="text-brand-accent">→</span>
+                                </a>
+                            </div>
+
+                            <!-- Right panel -->
+                            <div class="lg:col-span-8 p-8 md:p-10 flex flex-col gap-8">
+                                <!-- Bio -->
+                                <div>
+                                    <div class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">About</div>
+                                    <p class="text-brand-text/80 text-base md:text-lg leading-relaxed font-medium">
+                                        Kavitha Y N brings a rare combination to the classroom: hands-on <strong class="text-brand-text">Oracle Cloud Supply Chain Management</strong> expertise paired with formal Agile product ownership training as a <strong class="text-brand-text">Certified SAFe® Product Owner/Product Manager (POPM)</strong>.
+                                    </p>
+                                    <p class="text-brand-text/70 text-base leading-relaxed mt-4">
+                                        That dual background changes how she teaches — learners don't just configure SCM modules screen by screen, they learn how those modules get scoped, prioritized, and delivered inside a real Agile delivery cycle, the same way a business actually runs an implementation.
+                                    </p>
+                                </div>
+
+                                <!-- What you'll learn -->
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="rounded-xl p-5 bg-brand-bg border border-brand-dark/8">
+                                        <div class="font-mono text-xs text-brand-accent uppercase tracking-widest mb-2">Modules Covered</div>
+                                        <ul class="space-y-1.5 text-sm text-brand-text/70">
+                                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent shrink-0"></span>Inventory Management</li>
+                                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent shrink-0"></span>Order Management</li>
+                                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent shrink-0"></span>Procurement Cloud</li>
+                                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent shrink-0"></span>SCM Configuration</li>
+                                        </ul>
+                                    </div>
+                                    <div class="rounded-xl p-5 bg-brand-card-blue/30 border border-brand-dark/8">
+                                        <div class="font-mono text-xs text-brand-accent uppercase tracking-widest mb-2">Teaching Style</div>
+                                        <p class="text-sm text-brand-text/70 leading-relaxed">Scenario-first: every configuration is grounded in a real business requirement before a single screen is touched.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 bg-brand-card-green/40 border border-brand-dark/8">
+                                        <div class="font-mono text-xs text-green-700 uppercase tracking-widest mb-2">Teaches</div>
+                                        <p class="text-sm font-semibold">Oracle Cloud Training</p>
+                                        <p class="text-xs text-brand-text/50 mt-1">SCM Modules — all batch formats</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── MEGANATHAN M ── -->
+                    <div class="trainer-card rounded-2xl bg-white border border-brand-dark/8 shadow-sm overflow-hidden" data-animation-on-scroll="">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+
+                            <!-- Left panel -->
+                            <div class="lg:col-span-4 bg-gradient-to-br from-brand-card-yellow/60 to-brand-bg p-8 md:p-10 flex flex-col gap-6 border-b lg:border-b-0 lg:border-r border-brand-dark/8">
+                                <div class="flex items-start gap-5">
+                                    <div class="avatar-ring shrink-0" style="background:linear-gradient(135deg,#E8A838,#F5C86A,#E8A838);">
+                                        <div class="w-16 h-16 rounded-full flex items-center justify-center text-white font-primary text-2xl font-light" style="background:linear-gradient(135deg,#E8A838,#D4901E);">
+                                            M
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-primary text-2xl font-light tracking-tight">Meganathan M</h2>
+                                        <p class="text-brand-text/50 text-sm font-medium mt-0.5">SAP Trainer</p>
+                                        <a href="https://www.linkedin.com/in/meganathan-m-067774253" target="_blank" rel="noopener" class="li-btn mt-3 inline-flex">
+                                            <svg width="12" height="12" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                            LinkedIn
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-3">Certifications</div>
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center gap-2 text-sm font-medium">
+                                            <span class="w-5 h-5 rounded-full bg-yellow-100 flex items-center justify-center shrink-0">
+                                                <svg class="w-3 h-3 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                            </span>
+                                            SAP Certified Application Associate
+                                        </div>
+                                        <div class="flex items-center gap-2 text-sm font-medium">
+                                            <span class="w-5 h-5 rounded-full bg-yellow-100 flex items-center justify-center shrink-0">
+                                                <svg class="w-3 h-3 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                            </span>
+                                            SAP S/4HANA Specialist
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-3">Specialises In</div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="spec-tag" style="background:rgba(232,168,56,0.1);color:#B8820A;border-color:rgba(232,168,56,0.2);">SAP MM</span>
+                                        <span class="spec-tag" style="background:rgba(232,168,56,0.1);color:#B8820A;border-color:rgba(232,168,56,0.2);">S/4HANA</span>
+                                        <span class="spec-tag" style="background:rgba(232,168,56,0.1);color:#B8820A;border-color:rgba(232,168,56,0.2);">SAP FICO</span>
+                                        <span class="spec-tag" style="background:rgba(232,168,56,0.1);color:#B8820A;border-color:rgba(232,168,56,0.2);">SAP SD</span>
+                                        <span class="spec-tag" style="background:rgba(232,168,56,0.1);color:#B8820A;border-color:rgba(232,168,56,0.2);">Procurement</span>
+                                    </div>
+                                </div>
+
+                                <a href="#cta" class="mt-2 inline-flex items-center gap-2 bg-brand-dark text-brand-light rounded-full px-5 py-3 text-sm font-semibold hover:bg-opacity-90 transition self-start">
+                                    Book Demo with Meganathan <span class="text-yellow-400">→</span>
+                                </a>
+                            </div>
+
+                            <!-- Right panel -->
+                            <div class="lg:col-span-8 p-8 md:p-10 flex flex-col gap-8">
+                                <div>
+                                    <div class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">About</div>
+                                    <p class="text-brand-text/80 text-base md:text-lg leading-relaxed font-medium">
+                                        Meganathan M teaches <strong class="text-brand-text">SAP</strong> with the perspective of someone who has worked inside real SAP implementations, not just studied them. He brings years of hands-on field experience across SAP MM, FICO, SD, and S/4HANA — working with manufacturing and logistics clients before moving into training.
+                                    </p>
+                                    <p class="text-brand-text/70 text-base leading-relaxed mt-4">
+                                        That background shows up in how he runs a Beyond20 classroom: configuration exercises are modeled on real client scenarios, not generic training data, so learners understand not just which button to click — but <em>why a business would need that step at all</em>.
+                                    </p>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="rounded-xl p-5 bg-brand-bg border border-brand-dark/8">
+                                        <div class="font-mono text-xs text-yellow-600 uppercase tracking-widest mb-2">Modules Covered</div>
+                                        <ul class="space-y-1.5 text-sm text-brand-text/70">
+                                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500 shrink-0"></span>SAP MM — full P2P cycle</li>
+                                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500 shrink-0"></span>S/4HANA Fiori</li>
+                                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500 shrink-0"></span>Inventory Management</li>
+                                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500 shrink-0"></span>Valuation &amp; FI integration</li>
+                                        </ul>
+                                    </div>
+                                    <div class="rounded-xl p-5 bg-brand-card-yellow/40 border border-brand-dark/8">
+                                        <div class="font-mono text-xs text-yellow-700 uppercase tracking-widest mb-2">Teaching Style</div>
+                                        <p class="text-sm text-brand-text/70 leading-relaxed">Real client scenarios replace generic training data — every lab has a business reason behind it.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 bg-brand-card-green/40 border border-brand-dark/8">
+                                        <div class="font-mono text-xs text-green-700 uppercase tracking-widest mb-2">Teaches</div>
+                                        <p class="text-sm font-semibold">SAP MM Training</p>
+                                        <p class="text-xs text-brand-text/50 mt-1">S/4HANA · All batch formats</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── NAREN RAJ ── -->
+                    <div class="trainer-card rounded-2xl bg-white border border-brand-dark/8 shadow-sm overflow-hidden" data-animation-on-scroll="">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+
+                            <!-- Left panel -->
+                            <div class="lg:col-span-4 bg-gradient-to-br from-purple-50 to-brand-bg p-8 md:p-10 flex flex-col gap-6 border-b lg:border-b-0 lg:border-r border-brand-dark/8">
+                                <div class="flex items-start gap-5">
+                                    <div class="avatar-ring shrink-0" style="background:linear-gradient(135deg,#8B5CF6,#C084FC,#8B5CF6);">
+                                        <div class="w-16 h-16 rounded-full flex items-center justify-center text-white font-primary text-2xl font-light" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED);">
+                                            N
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-primary text-2xl font-light tracking-tight">Naren Raj</h2>
+                                        <p class="text-brand-text/50 text-sm font-medium mt-0.5">Oracle &amp; SAP Trainer</p>
+                                        <a href="https://www.linkedin.com/in/naren-raj-0529a7428" target="_blank" rel="noopener" class="li-btn mt-3 inline-flex">
+                                            <svg width="12" height="12" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                            LinkedIn
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-3">Certifications</div>
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center gap-2 text-sm font-medium">
+                                            <span class="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center shrink-0">
+                                                <svg class="w-3 h-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                            </span>
+                                            Oracle Cloud Certified Implementation Specialist
+                                        </div>
+                                        <div class="flex items-center gap-2 text-sm font-medium">
+                                            <span class="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center shrink-0">
+                                                <svg class="w-3 h-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                            </span>
+                                            SAP Certified Application Associate
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-3">Specialises In</div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="spec-tag" style="background:rgba(139,92,246,0.08);color:#7C3AED;border-color:rgba(139,92,246,0.2);">Oracle Cloud</span>
+                                        <span class="spec-tag" style="background:rgba(139,92,246,0.08);color:#7C3AED;border-color:rgba(139,92,246,0.2);">SAP S/4HANA</span>
+                                        <span class="spec-tag" style="background:rgba(139,92,246,0.08);color:#7C3AED;border-color:rgba(139,92,246,0.2);">Cross-Platform</span>
+                                        <span class="spec-tag" style="background:rgba(139,92,246,0.08);color:#7C3AED;border-color:rgba(139,92,246,0.2);">ERP Advisory</span>
+                                    </div>
+                                </div>
+
+                                <a href="#cta" class="mt-2 inline-flex items-center gap-2 bg-brand-dark text-brand-light rounded-full px-5 py-3 text-sm font-semibold hover:bg-opacity-90 transition self-start">
+                                    Book Demo with Naren <span class="text-purple-400">→</span>
+                                </a>
+                            </div>
+
+                            <!-- Right panel -->
+                            <div class="lg:col-span-8 p-8 md:p-10 flex flex-col gap-8">
+                                <div>
+                                    <div class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">About</div>
+                                    <p class="text-brand-text/80 text-base md:text-lg leading-relaxed font-medium">
+                                        Naren Raj trains across both <strong class="text-brand-text">Oracle Cloud and SAP</strong>, giving him a wider vantage point than most single-platform trainers. He can speak directly to how the two ecosystems compare, where a business would choose one over the other, and how the underlying business logic — finance, procurement, supply chain — stays consistent even as the platform changes.
+                                    </p>
+                                    <p class="text-brand-text/70 text-base leading-relaxed mt-4">
+                                        That cross-platform depth means learners get more than "how to use this tool" — they get a sense of the <em>decision-making that sits above it</em>: why an enterprise picks Oracle over SAP, how ERP implementations are scoped, and what a consultant actually does on day one of a project.
+                                    </p>
+                                </div>
+
+                                <!-- Dual platform highlight -->
+                                <div class="rounded-2xl border border-brand-dark/8 overflow-hidden">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8">
+                                        <div class="p-6">
+                                            <div class="flex items-center gap-2 mb-3">
+                                                <div class="w-6 h-6 rounded-lg flex items-center justify-center shrink-0" style="background:#F80000;">
+                                                    <span class="text-white text-xs font-bold">O</span>
+                                                </div>
+                                                <div class="font-mono text-xs text-brand-text/40 uppercase tracking-widest">Oracle Cloud Track</div>
+                                            </div>
+                                            <ul class="space-y-1.5 text-sm text-brand-text/70">
+                                                <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent shrink-0"></span>Financials — GL, AP, AR</li>
+                                                <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent shrink-0"></span>HCM Core &amp; Payroll</li>
+                                                <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent shrink-0"></span>SCM &amp; Procurement</li>
+                                                <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent shrink-0"></span>OTBI Reporting</li>
+                                            </ul>
+                                        </div>
+                                        <div class="p-6">
+                                            <div class="flex items-center gap-2 mb-3">
+                                                <div class="w-6 h-6 rounded-lg flex items-center justify-center shrink-0" style="background:#1677CE;">
+                                                    <span class="text-white text-xs font-bold">S</span>
+                                                </div>
+                                                <div class="font-mono text-xs text-brand-text/40 uppercase tracking-widest">SAP Track</div>
+                                            </div>
+                                            <ul class="space-y-1.5 text-sm text-brand-text/70">
+                                                <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500 shrink-0"></span>SAP MM — P2P cycle</li>
+                                                <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500 shrink-0"></span>S/4HANA Fiori UX</li>
+                                                <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500 shrink-0"></span>FICO Fundamentals</li>
+                                                <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500 shrink-0"></span>Cross-module integration</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== OTHER TRACKS ====== -->
+        <section class="py-20 md:py-24 bg-brand-card-gray/30 border-y border-brand-dark/8" data-animation-on-scroll="">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8">
+                <div class="mb-12">
+                    <span class="font-mono text-xs tracking-[0.2em] uppercase text-brand-text/40 block mb-3">Additional Tracks</span>
+                    <h2 class="font-primary text-3xl md:text-4xl font-light tracking-tight">Also Training In: <span class="italic">AWS, Azure &amp; Digital Marketing</span></h2>
+                    <p class="text-brand-text/55 text-base mt-3 max-w-2xl">Trainer bios for these three tracks are being finalized. In the meantime, here's what each course covers.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- AWS -->
+                    <div class="track-card rounded-2xl bg-white p-8 flex flex-col gap-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-14 h-14 rounded-2xl flex items-center justify-center overflow-hidden bg-white border border-gray-100 shrink-0" style="padding:6px;">
+                                <img src="aws-logo.png" alt="AWS" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+                            <div>
+                                <h3 class="font-primary text-xl font-light">AWS Training</h3>
+                                <span class="text-xs text-brand-text/40 font-mono uppercase tracking-widest">14–16 Weeks</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-brand-text/65 leading-relaxed">Cloud infrastructure skills, certification-ready. Covers compute, storage, networking, IAM, and cost management — built around a live multi-tier deployment project.</p>
+                        <div class="flex flex-wrap gap-1.5 mt-auto">
+                            <span class="text-xs bg-orange-50 text-orange-700 border border-orange-100 rounded-full px-2.5 py-1 font-medium">AWS CCP</span>
+                            <span class="text-xs bg-orange-50 text-orange-700 border border-orange-100 rounded-full px-2.5 py-1 font-medium">Solutions Architect</span>
+                            <span class="text-xs bg-orange-50 text-orange-700 border border-orange-100 rounded-full px-2.5 py-1 font-medium">Live Project</span>
+                        </div>
+                        <a href="courses.html#aws" class="flex items-center gap-1 text-sm font-semibold text-brand-accent hover:gap-2 transition-all">View Course Details <span>→</span></a>
+                    </div>
+
+                    <!-- Azure -->
+                    <div class="track-card rounded-2xl bg-white p-8 flex flex-col gap-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-14 h-14 rounded-2xl flex items-center justify-center overflow-hidden bg-white border border-gray-100 shrink-0" style="padding:6px;">
+                                <img src="azure-logo.svg" alt="Azure" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+                            <div>
+                                <h3 class="font-primary text-xl font-light">Azure Training</h3>
+                                <span class="text-xs text-brand-text/40 font-mono uppercase tracking-widest">14–16 Weeks</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-brand-text/65 leading-relaxed">Microsoft cloud administration and architecture. Covers virtual machines, storage, networking, identity &amp; access, and resource management — built around deploying a secure, scalable Azure environment.</p>
+                        <div class="flex flex-wrap gap-1.5 mt-auto">
+                            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-full px-2.5 py-1 font-medium">AZ-104</span>
+                            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-full px-2.5 py-1 font-medium">AZ-305</span>
+                            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-full px-2.5 py-1 font-medium">Live Project</span>
+                        </div>
+                        <a href="courses.html#azure" class="flex items-center gap-1 text-sm font-semibold text-brand-accent hover:gap-2 transition-all">View Course Details <span>→</span></a>
+                    </div>
+
+                    <!-- Digital Marketing -->
+                    <div class="track-card rounded-2xl bg-white p-8 flex flex-col gap-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-14 h-14 rounded-2xl shrink-0 flex items-center justify-center gap-1" style="background:linear-gradient(135deg,#1877F2,#EA4335);padding:8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="white"/><path d="M21.5 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.3c-.2 1.2-.9 2.2-2 2.8v2.3h3.2c1.9-1.7 2.9-4.3 2.9-6.8h.1z" fill="#4285F4"/><path d="M12 22c2.7 0 4.9-.9 6.5-2.4l-3.2-2.3c-.9.6-2 1-3.3 1-2.5 0-4.7-1.7-5.5-4H3.2v2.4C4.8 19.9 8.1 22 12 22z" fill="#34A853"/><path d="M6.5 14.3c-.2-.6-.3-1.2-.3-1.8 0-.6.1-1.3.3-1.8V8.3H3.2C2.4 9.8 2 11.3 2 13c0 1.7.4 3.2 1.2 4.7l3.3-2.4z" fill="#FBBC05"/><path d="M12 6.6c1.4 0 2.6.5 3.6 1.4l2.7-2.7C16.9 3.9 14.7 3 12 3 8.1 3 4.8 5.1 3.2 8.3l3.3 2.4C7.3 8.3 9.5 6.6 12 6.6z" fill="#EA4335"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-primary text-xl font-light">Digital Marketing</h3>
+                                <span class="text-xs text-brand-text/40 font-mono uppercase tracking-widest">12–14 Weeks · AI Automation</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-brand-text/65 leading-relaxed">SEO, SEM, social media, and analytics — taught through live campaigns, not just platform tutorials. Covers Google Ads, Meta, content, email, and campaign reporting.</p>
+                        <div class="flex flex-wrap gap-1.5 mt-auto">
+                            <span class="text-xs bg-purple-50 text-purple-700 border border-purple-100 rounded-full px-2.5 py-1 font-medium">Google Ads</span>
+                            <span class="text-xs bg-purple-50 text-purple-700 border border-purple-100 rounded-full px-2.5 py-1 font-medium">Meta Ads</span>
+                            <span class="text-xs bg-purple-50 text-purple-700 border border-purple-100 rounded-full px-2.5 py-1 font-medium">AI Automation</span>
+                        </div>
+                        <a href="courses.html#digital" class="flex items-center gap-1 text-sm font-semibold text-brand-accent hover:gap-2 transition-all">View Course Details <span>→</span></a>
+                    </div>
+                </div>
+
+                <p class="text-xs text-brand-text/35 font-mono mt-8 text-center">Trainer bios for AWS, Azure &amp; Digital Marketing tracks will be added here once faculty is confirmed.</p>
+            </div>
+        </section>
+
+        <!-- ====== TEACHING PHILOSOPHY ====== -->
+        <section class="py-20 md:py-28" data-animation-on-scroll="">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                    <div class="lg:col-span-5">
+                        <span class="font-mono text-xs tracking-[0.2em] uppercase text-brand-text/40 block mb-4">Our Approach</span>
+                        <h2 class="font-primary text-4xl md:text-5xl font-light tracking-tight leading-tight">How We Teach,<br><span class="italic">Not Just What</span><br>We Teach</h2>
+                        <p class="text-brand-text/55 text-base mt-6 leading-relaxed">The methods that create job-ready professionals — not just course-completers.</p>
+                    </div>
+                    <div class="lg:col-span-7 flex flex-col gap-5">
+                        <div class="philosophy-item pl-6 py-2">
+                            <p class="font-semibold text-base mb-1">Business Scenario First</p>
+                            <p class="text-brand-text/60 text-sm leading-relaxed">Every module is anchored to a real business scenario before it's anchored to a slide. You understand the "why" before you touch the configuration.</p>
+                        </div>
+                        <div class="philosophy-item pl-6 py-2">
+                            <p class="font-semibold text-base mb-1">Build First, Explain Second</p>
+                            <p class="text-brand-text/60 text-sm leading-relaxed">Labs and live projects come before theory recall — you build it, then we explain why it worked. Retention is far higher when muscle memory leads.</p>
+                        </div>
+                        <div class="philosophy-item pl-6 py-2">
+                            <p class="font-semibold text-base mb-1">Doubt-Clearing Is Scheduled</p>
+                            <p class="text-brand-text/60 text-sm leading-relaxed">Doubt-clearing is built into the schedule, not squeezed in at the end. Questions get the time they deserve — because production questions are rarely simple.</p>
+                        </div>
+                        <div class="philosophy-item pl-6 py-2">
+                            <p class="font-semibold text-base mb-1">Post-Course Support</p>
+                            <p class="text-brand-text/60 text-sm leading-relaxed">Trainers stay reachable after the course for placement-related questions — resume positioning, interview scenarios, and real-role transitions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== FINAL CTA ====== -->
+        <section id="cta" class="py-20 md:py-28 bg-brand-dark text-brand-light relative overflow-hidden" data-animation-on-scroll="">
+            <div class="hero-glow absolute top-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#4A66D6 0%,transparent 65%);transform:translate(-30%,-30%);"></div>
+            <div class="hero-glow absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#7B45C4 0%,transparent 65%);transform:translate(30%,30%);animation-delay:3s;"></div>
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 relative z-10 text-center flex flex-col items-center gap-8">
+                <span class="font-mono text-xs tracking-[0.2em] uppercase text-brand-accent">No Commitment Required</span>
+                <h2 class="font-primary text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight max-w-3xl">Sit in on a Class<br><span class="italic">Before You Decide</span></h2>
+                <p class="text-brand-light/60 text-lg max-w-xl leading-relaxed">Attend a free demo session with the trainer for the course you're interested in. No fees, no pressure — just a real class.</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#" class="bg-brand-bg text-brand-dark rounded-full px-8 py-4 text-base font-semibold hover:bg-white transition flex items-center gap-2">
+                        Book a Free Demo Class <span class="text-brand-accent">→</span>
+                    </a>
+                    <a href="courses.html" class="bg-white/10 border border-white/20 text-brand-light rounded-full px-8 py-4 text-base font-semibold hover:bg-white/15 transition">
+                        View All Courses
+                    </a>
+                </div>
+
+                <!-- Trainer quick links -->
+                <div class="flex flex-wrap justify-center gap-4 pt-4 border-t border-white/10 w-full max-w-2xl">
+                    <span class="text-brand-light/30 text-xs font-mono uppercase tracking-widest w-full text-center mb-2">Book directly with a trainer</span>
+                    <a href="#" class="bg-white/8 border border-white/12 text-brand-light/70 rounded-full px-5 py-2 text-sm font-medium hover:bg-white/15 hover:text-brand-light transition">Kavitha — Oracle SCM</a>
+                    <a href="#" class="bg-white/8 border border-white/12 text-brand-light/70 rounded-full px-5 py-2 text-sm font-medium hover:bg-white/15 hover:text-brand-light transition">Meganathan — SAP</a>
+                    <a href="#" class="bg-white/8 border border-white/12 text-brand-light/70 rounded-full px-5 py-2 text-sm font-medium hover:bg-white/15 hover:text-brand-light transition">Naren Raj — Oracle &amp; SAP</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER (matches home.html) ====== -->
+    <footer class="bg-brand-bg pt-32 pb-12 relative z-10 border-t border-brand-dark/5 mt-0">
+        <div class="max-w-[1376px] mx-auto px-6 md:px-8 flex flex-col gap-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-4 flex flex-col gap-8">
+                    <h2 class="font-primary text-3xl md:text-4xl font-light tracking-tight">Stay connected with what actually matters</h2>
+                    <div class="relative w-full max-w-sm mt-4 group">
+                        <input type="email" placeholder="Subscribe to newsletter"
+                            class="w-full bg-transparent border-b border-brand-dark/20 py-3 pr-12 focus:outline-none focus:border-brand-dark transition placeholder:text-brand-dark/40 font-medium">
+                        <button class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-brand-bg group-hover:bg-brand-dark group-hover:text-white rounded-full flex items-center justify-center transition-colors border border-brand-dark/10 group-hover:border-brand-dark">→</button>
+                    </div>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-12 text-lg font-medium">
+                    <div class="flex flex-col gap-4">
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text mb-2 opacity-50">Beyond20</div>
+                        <a href="courses.html" class="hover:text-brand-accent transition">Courses</a>
+                        <a href="faculty.html" class="hover:text-brand-accent transition">Faculty</a>
+                        <a href="placements.html" class="hover:text-brand-accent transition">Placements</a>
+                        <a href="home.html#insights" class="hover:text-brand-accent transition">Blog</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text mb-2 opacity-50">About</div>
+                        <a href="#" class="hover:text-brand-accent transition">Our Story</a>
+                        <a href="home.html#insights" class="hover:text-brand-accent transition">Blog</a>
+                        <a href="#" class="hover:text-brand-accent transition">Careers</a>
+                        <a href="#cta" class="hover:text-brand-accent transition">Contact</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text mb-2 opacity-50">More</div>
+                        <a href="#" class="hover:text-brand-accent transition">Student Login</a>
+                        <a href="#cta" class="hover:text-brand-accent transition">Enroll Now</a>
+                        <a href="#" class="hover:text-brand-accent transition">Legal</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center border-t border-brand-dark/10 pt-16">
+                <div class="flex overflow-hidden w-full gap-8 opacity-[0.08] pointer-events-none select-none mb-16">
+                    <div class="flex min-w-full shrink-0 animate-marquee gap-8">
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                    </div>
+                    <div class="flex min-w-full shrink-0 animate-marquee gap-8">
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-8 text-sm text-brand-text/80 font-medium">
+                    <p class="max-w-2xl leading-relaxed">Beyond20 is a training institute based in Bangalore, India, offering Oracle Cloud, SAP, AWS, Azure, and Digital Marketing training. Course details, fees, and placement figures are updated periodically — please confirm current details with our admissions team before enrolling.</p>
+                    <div class="flex flex-col items-start md:items-end gap-3 shrink-0">
+                        <div>© 2026 Beyond20. All rights reserved.</div>
+                        <div class="flex gap-6 text-brand-text/60">
+                            <a href="#" class="hover:text-brand-text transition">Refund Policy</a>
+                            <a href="#" class="hover:text-brand-text transition">Terms</a>
+                            <a href="#" class="hover:text-brand-text transition">Privacy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-4 bg-brand-dark text-brand-light px-2 py-2 pl-6 rounded-full shadow-2xl border border-white/10 pointer-events-auto">
+        <span class="text-sm font-medium opacity-90 hidden md:block">Ready to skill up?</span>
+        <a href="#cta" class="bg-brand-bg text-brand-dark px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white transition flex items-center gap-2">
+            Book Free Demo <span class="text-brand-accent">→</span>
+        </a>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+            el.classList.add('animate-on-scroll-hidden');
+            observer.observe(el);
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                });
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

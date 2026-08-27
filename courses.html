@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>IT & Cloud Training Courses in Bangalore | Oracle Fusion, SAP MM, AWS, Azure & AI-Powered Digital Marketing | Beyond20</title>
+    <meta name="description" content="Beyond20 offers job-focused training in Oracle Cloud Fusion, SAP MM, AWS, Azure, and Full Stack Digital Marketing with AI Automation. 15+ years experienced trainers, live projects, placement support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .animate-on-scroll-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .animate-on-scroll-visible { opacity: 1; transform: translateY(0); }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0px, 0px); }
+            50% { transform: translate(20px, -14px); }
+        }
+        .animation-float { animation: float 8s ease-in-out infinite; }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translate(0px, 0px); }
+            50% { transform: translate(-28px, -18px); }
+        }
+        .animation-float-slow { animation: float-slow 12s ease-in-out infinite; }
+
+        /* Course card expand/collapse */
+        .course-body { max-height: 0; overflow: hidden; transition: max-height 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+        .course-body.open { max-height: 3000px; }
+        .course-chevron { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .course-card.open .course-chevron { transform: rotate(180deg); }
+
+        /* FAQ accordion */
+        .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .faq-body.open { max-height: 400px; }
+        .faq-chevron { transition: transform 0.3s ease; }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+        /* Tag pill */
+        .tag-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(74,102,214,0.1); color: #4A66D6;
+            border: 1px solid rgba(74,102,214,0.2); border-radius: 999px;
+            padding: 4px 12px; font-size: 12px; font-weight: 600; letter-spacing: 0.03em;
+        }
+
+        /* Sticky filter bar */
+        .filter-bar-sticky { position: sticky; top: 72px; z-index: 40; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .module-row:nth-child(odd) { background: rgba(74,102,214,0.03); }
+        .gradient-text { background: linear-gradient(135deg, #4A66D6 0%, #7B93E8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .filter-btn.active { background: #11080B; color: #F7F6F5; }
+
+        /* ── Hero animated background ── */
+        @keyframes grid-move {
+            0% { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(74,102,214,0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74,102,214,0.08) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: grid-move 8s linear infinite;
+        }
+        @keyframes orbit {
+            0%   { transform: rotate(0deg)   translateX(180px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(180px) rotate(-360deg); }
+        }
+        @keyframes orbit2 {
+            0%   { transform: rotate(120deg)  translateX(260px) rotate(-120deg); }
+            100% { transform: rotate(480deg)  translateX(260px) rotate(-480deg); }
+        }
+        @keyframes orbit3 {
+            0%   { transform: rotate(240deg)  translateX(340px) rotate(-240deg); }
+            100% { transform: rotate(600deg)  translateX(340px) rotate(-600deg); }
+        }
+        .orbit-icon-1 { animation: orbit  14s linear infinite; }
+        .orbit-icon-2 { animation: orbit2 20s linear infinite; }
+        .orbit-icon-3 { animation: orbit3 26s linear infinite; }
+        @keyframes hero-pulse {
+            0%, 100% { opacity: 0.15; transform: scale(1); }
+            50%       { opacity: 0.25; transform: scale(1.05); }
+        }
+        .hero-glow { animation: hero-pulse 6s ease-in-out infinite; }
+        @keyframes badge-float {
+            0%, 100% { transform: translateY(0px); }
+            50%       { transform: translateY(-8px); }
+        }
+        .badge-float-1 { animation: badge-float 4s ease-in-out infinite; }
+        .badge-float-2 { animation: badge-float 5.5s ease-in-out infinite 1s; }
+        .badge-float-3 { animation: badge-float 4.8s ease-in-out infinite 0.5s; }
+    </style>
+
+    <style type="text/tailwindcss">@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}</style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+        important: '#app-root',
+        theme: {
+            extend: {
+                colors: {
+                    'brand-bg': '#F7F6F5',
+                    'brand-text': '#11080B',
+                    'brand-accent': '#4A66D6',
+                    'brand-dark': '#11080B',
+                    'brand-light': '#F7F6F5',
+                    'brand-card-dark': '#24151B',
+                    'brand-card-blue': '#D6E0EA',
+                    'brand-card-pink': '#E8E1E6',
+                    'brand-card-yellow': '#F6EFE4',
+                    'brand-card-gray': '#E5E3E1',
+                    'brand-card-green': '#DEE6E1',
+                },
+                fontFamily: {
+                    'primary': ['"Fraunces"', 'serif'],
+                    'secondary': ['"Plus Jakarta Sans"', 'sans-serif'],
+                    'mono': ['"Space Mono"', 'monospace'],
+                },
+                borderRadius: {
+                    'xl': '20px',
+                    '2xl': '32px',
+                },
+                animation: {
+                    'marquee': 'marquee 40s linear infinite',
+                },
+                keyframes: {
+                    marquee: {
+                        '0%': { transform: 'translateX(0%)' },
+                        '100%': { transform: 'translateX(-100%)' },
+                    },
+                }
+            },
+        },
+        plugins: [],
+    }</script>
+</head>
+
+<body id="app-root">
+<div class="font-secondary bg-brand-bg text-brand-text overflow-x-hidden min-h-screen flex flex-col w-full relative antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- ====== NAVBAR ====== -->
+    <header class="fixed top-0 left-0 right-0 z-50 pointer-events-none px-4 md:px-8 pt-4">
+        <nav class="bg-white rounded-b-[20px] rounded-t-[20px] shadow-sm px-6 py-3 flex items-center justify-between pointer-events-auto max-w-[1376px] mx-auto border border-gray-100 transition-all duration-300">
+            <div class="flex items-center gap-12">
+                <a href="home.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img src="logo(1).png" alt="Beyond20" class="h-8 md:h-10 w-auto">
+                    <span class="font-primary text-2xl font-medium tracking-tight">Beyond<span class="text-blue-600">20</span></span>
+                </a>
+                <div class="hidden lg:flex items-center gap-6">
+                    <a href="courses.html" class="text-sm font-medium text-brand-accent transition">Courses</a>
+                    <a href="faculty.html" class="text-sm font-medium hover:text-brand-accent transition">Faculty</a>
+                    <a href="placements.html" class="text-sm font-medium hover:text-brand-accent transition">Placements</a>
+                    <a href="home.html#insights" class="text-sm font-medium hover:text-brand-accent transition">Blog</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden md:block text-sm font-medium hover:text-brand-accent transition px-4 py-2">Student Login</a>
+                <a href="#consult" class="hidden lg:inline-flex bg-brand-dark text-brand-light rounded-full px-5 py-2.5 text-sm font-medium hover:bg-opacity-90 transition">Book Free Demo</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-dark hover:text-brand-accent transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-4 right-4 mt-2 bg-white rounded-[20px] shadow-xl border border-gray-100 p-6 flex-col gap-4 pointer-events-auto">
+            <a href="courses.html" class="mobile-link text-lg font-medium text-brand-accent transition">Courses</a>
+            <a href="faculty.html" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Faculty</a>
+            <a href="placements.html" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Placements</a>
+            <a href="home.html#insights" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Blog</a>
+            <hr class="border-gray-100 my-2">
+            <a href="#" class="mobile-link text-lg font-medium hover:text-brand-accent transition">Student Login</a>
+            <a href="#consult" class="mobile-link bg-brand-dark text-brand-light rounded-full px-5 py-3 text-center text-sm font-medium hover:bg-opacity-90 transition mt-2">Book Free Demo</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- ====== HERO SECTION ====== -->
+        <section class="relative pt-36 pb-0 md:pt-44 bg-brand-dark text-brand-light overflow-hidden min-h-[85vh] flex flex-col justify-center">
+
+            <!-- Animated grid background -->
+            <div class="hero-grid absolute inset-0 pointer-events-none"></div>
+
+            <!-- Large glowing orbs -->
+            <div class="hero-glow absolute top-[-20%] left-[-10%] w-[700px] h-[700px] rounded-full pointer-events-none" style="background: radial-gradient(circle, #4A66D6 0%, transparent 65%);"></div>
+            <div class="hero-glow absolute bottom-[-30%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none" style="background: radial-gradient(circle, #7B45C4 0%, transparent 65%); animation-delay: 3s;"></div>
+
+            <!-- Orbiting tech brand badges (hidden on mobile) -->
+            <div class="hidden lg:block absolute right-[8%] top-1/2 -translate-y-1/2 w-0 h-0 pointer-events-none z-10">
+                <!-- Inner orbit -->
+                <div class="orbit-icon-1 absolute">
+                    <div class="bg-white/10 backdrop-blur border border-white/15 rounded-2xl px-4 py-3 flex items-center gap-2 shadow-xl" style="white-space:nowrap">
+                        <svg width="22" height="22" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#F80000"/><text x="22" y="28" text-anchor="middle" font-size="16" fill="white" font-weight="bold">O</text></svg>
+                        <span class="text-white text-xs font-semibold">Oracle Cloud</span>
+                    </div>
+                </div>
+                <!-- Mid orbit -->
+                <div class="orbit-icon-2 absolute">
+                    <div class="bg-white/10 backdrop-blur border border-white/15 rounded-2xl px-4 py-3 flex items-center gap-2 shadow-xl" style="white-space:nowrap">
+                        <svg width="22" height="22" viewBox="0 0 44 44"><rect width="44" height="44" rx="6" fill="#1677CE"/><text x="22" y="30" text-anchor="middle" font-size="18" fill="white" font-weight="bold">S</text></svg>
+                        <span class="text-white text-xs font-semibold">SAP S/4HANA</span>
+                    </div>
+                </div>
+                <!-- Outer orbit -->
+                <div class="orbit-icon-3 absolute">
+                    <div class="bg-white/10 backdrop-blur border border-white/15 rounded-2xl px-4 py-3 flex items-center gap-2 shadow-xl" style="white-space:nowrap">
+                        <svg width="22" height="22" viewBox="0 0 88 88"><rect width="88" height="88" rx="10" fill="#FF9900"/><path d="M44 18c-10.5 0-19 8.5-19 19s8.5 19 19 19 19-8.5 19-19-8.5-19-19-19z" fill="white"/></svg>
+                        <span class="text-white text-xs font-semibold">AWS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating skill badge cards -->
+            <div class="hidden md:block absolute right-[3%] top-[22%] z-10 pointer-events-none">
+                <div class="badge-float-1 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl p-4 w-44 shadow-xl">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background:#0078D4">
+                            <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                        </div>
+                        <span class="text-white text-xs font-bold">Azure</span>
+                    </div>
+                    <div class="text-white/50 text-xs">AZ-104 · AZ-305</div>
+                </div>
+            </div>
+            <div class="hidden md:block absolute right-[3%] bottom-[28%] z-10 pointer-events-none">
+                <div class="badge-float-2 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl p-4 w-52 shadow-xl">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#8B5CF6,#C084FC)">
+                            <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <span class="text-white text-xs font-bold">Digital Marketing + AI</span>
+                    </div>
+                    <div class="text-white/50 text-xs">Google Ads · Meta · SEO</div>
+                </div>
+            </div>
+            <div class="hidden lg:block absolute left-[3%] bottom-[35%] z-10 pointer-events-none">
+                <div class="badge-float-3 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl p-4 w-44 shadow-xl">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-7 h-7 rounded-lg flex items-center justify-center bg-green-600">
+                            <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <span class="text-white text-xs font-bold">99% Placed</span>
+                    </div>
+                    <div class="text-white/50 text-xs">200+ hiring companies</div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 relative z-10 py-12" data-animation-on-scroll="">
+                <div class="flex flex-col gap-6 max-w-3xl">
+                    <div class="flex items-center gap-3">
+                        <span class="w-6 h-px bg-brand-accent"></span>
+                        <span class="font-mono text-xs tracking-[0.2em] uppercase text-brand-accent">5 Professional Tracks · Bangalore</span>
+                    </div>
+                    <h1 class="font-primary text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.05]">
+                        Courses Built Around<br>
+                        <span class="italic text-brand-accent">What Companies</span><br>
+                        Are Hiring For
+                    </h1>
+                    <p class="text-brand-light/65 text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
+                        Five tracks — Oracle Cloud, SAP MM, AWS, Azure, Digital Marketing with AI — each built to take you from concept to job-ready. Real tools. Real projects. Real placements.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-brand-light/70 text-sm font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span>
+                            15+ Yrs Experience
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-brand-light/70 text-sm font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-accent inline-block"></span>
+                            Live Hands-On Projects
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-brand-light/70 text-sm font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-yellow-400 inline-block"></span>
+                            Placement Support
+                        </div>
+                        <a href="#consult" class="flex items-center gap-2 bg-brand-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-opacity-90 transition">
+                            Book Free Demo →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stat strip -->
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 relative z-10 pb-0">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 rounded-t-2xl overflow-hidden" data-animation-on-scroll="">
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">5</span>
+                        <span class="text-brand-light/50 text-sm font-medium">Specialised Tracks</span>
+                    </div>
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">200<span class="text-2xl opacity-50">+</span></span>
+                        <span class="text-brand-light/50 text-sm font-medium">Hiring Companies</span>
+                    </div>
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">99<span class="text-2xl opacity-50">%</span></span>
+                        <span class="text-brand-light/50 text-sm font-medium">Placement Rate</span>
+                    </div>
+                    <div class="bg-brand-card-dark/80 backdrop-blur p-8 flex flex-col gap-2">
+                        <span class="font-primary text-4xl md:text-5xl font-light">15<span class="text-2xl opacity-50">+</span></span>
+                        <span class="text-brand-light/50 text-sm font-medium">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== FILTER BAR ====== -->
+        <div class="filter-bar-sticky bg-brand-bg/90 border-b border-brand-dark/10">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 py-3 flex items-center gap-3 overflow-x-auto scrollbar-hide">
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-text/40 shrink-0 mr-2">Jump to:</span>
+                <button data-filter="oracle" class="filter-btn shrink-0 text-xs font-semibold px-4 py-2 rounded-full border border-brand-dark/15 hover:border-brand-dark/40 transition-all">Oracle Cloud</button>
+                <button data-filter="sap" class="filter-btn shrink-0 text-xs font-semibold px-4 py-2 rounded-full border border-brand-dark/15 hover:border-brand-dark/40 transition-all">SAP MM</button>
+                <button data-filter="aws" class="filter-btn shrink-0 text-xs font-semibold px-4 py-2 rounded-full border border-brand-dark/15 hover:border-brand-dark/40 transition-all">AWS</button>
+                <button data-filter="azure" class="filter-btn shrink-0 text-xs font-semibold px-4 py-2 rounded-full border border-brand-dark/15 hover:border-brand-dark/40 transition-all">Azure</button>
+                <button data-filter="digital" class="filter-btn shrink-0 text-xs font-semibold px-4 py-2 rounded-full border border-brand-dark/15 hover:border-brand-dark/40 transition-all">Digital Marketing</button>
+            </div>
+        </div>
+
+        <!-- ====== COURSES SECTION ====== -->
+        <section class="py-20 md:py-28">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8 flex flex-col gap-8">
+
+                <!-- ── COURSE 1: ORACLE CLOUD FUSION ── -->
+                <div id="oracle" class="course-card rounded-2xl border border-brand-dark/10 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300" data-animation-on-scroll="">
+                    <!-- Card Header -->
+                    <button class="course-toggle w-full text-left" data-card="oracle">
+                        <div class="p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+                            <!-- Oracle Brand Logo -->
+                            <div class="shrink-0 w-24 h-16 rounded-2xl flex items-center justify-center overflow-hidden bg-white border border-gray-100" style="padding:6px;">
+                                <img src="oracle-logo.png" alt="Oracle" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+                            <!-- Title area -->
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="tag-pill">ERP & Cloud</span>
+                                    <span class="text-xs font-mono text-brand-text/40 uppercase tracking-widest">12–14 Weeks</span>
+                                </div>
+                                <h2 class="font-primary text-3xl md:text-4xl font-light tracking-tight leading-tight">Oracle Cloud Fusion Training</h2>
+                                <p class="mt-2 text-brand-text/60 text-base font-medium">Master the ERP system running finance, HR, and supply chain for the world's largest enterprises.</p>
+                            </div>
+                            <!-- Meta + Toggle -->
+                            <div class="flex items-center gap-6 shrink-0">
+                                <div class="hidden md:flex flex-col gap-1 text-right">
+                                    <span class="text-xs text-brand-text/40 font-mono uppercase tracking-widest">Format</span>
+                                    <span class="text-sm font-medium">Classroom · Online · Weekend</span>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-brand-bg border border-brand-dark/10 flex items-center justify-center shrink-0">
+                                    <svg class="course-chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- Card Body -->
+                    <div class="course-body" id="body-oracle">
+                        <div class="border-t border-brand-dark/8">
+
+                            <!-- Who should join + Eligibility -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Who Should Join</h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0"></span>Finance, HR, procurement & supply chain professionals moving into cloud ERP roles</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0"></span>ECC/EBS consultants transitioning to Oracle Fusion Cloud</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0"></span>Fresh graduates (commerce, finance, business) targeting Oracle consultant roles</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0"></span>Functional analysts wanting to move into implementation work</li>
+                                    </ul>
+                                </div>
+                                <div class="p-8 md:p-10 bg-brand-card-yellow/30">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Eligibility</h3>
+                                    <p class="text-sm text-brand-text/80 leading-relaxed">Any graduate. Prior exposure to finance, HR, or ERP concepts is helpful but not mandatory — the course builds from fundamentals.</p>
+                                    <div class="mt-6 pt-6 border-t border-brand-dark/8">
+                                        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-3">Batch Options</h3>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Classroom</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Live Online</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Weekend Batches</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Curriculum -->
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8">
+                                <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-6">Curriculum Overview</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <div class="module-row rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-brand-accent mb-2 uppercase tracking-widest">Foundation</div>
+                                        <h4 class="font-semibold text-sm mb-2">Oracle Fusion Cloud Fundamentals</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Cloud architecture & deployment model, Fusion interface navigation, security roles & role-based access, functional setup manager, configuration workbooks.</p>
+                                    </div>
+                                    <div class="module-row rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-brand-accent mb-2 uppercase tracking-widest">Financials</div>
+                                        <h4 class="font-semibold text-sm mb-2">Oracle Fusion Financials</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">General Ledger setup, Accounts Payable & Receivable, Fixed Assets, Cash Management, month-end close process — full F2P cycle coverage.</p>
+                                    </div>
+                                    <div class="module-row rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-brand-accent mb-2 uppercase tracking-widest">HCM</div>
+                                        <h4 class="font-semibold text-sm mb-2">Oracle Fusion HCM</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Core HR (worker records, organizations, jobs & positions), Payroll fundamentals, Talent Management, Absence Management, Self-Service transactions.</p>
+                                    </div>
+                                    <div class="module-row rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-brand-accent mb-2 uppercase tracking-widest">Supply Chain</div>
+                                        <h4 class="font-semibold text-sm mb-2">SCM Essentials</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Procurement basics (requisitions, POs, supplier qualification), Inventory Management fundamentals, Order Management — connecting Financials & HCM to supply chain.</p>
+                                    </div>
+                                    <div class="module-row rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-brand-accent mb-2 uppercase tracking-widest">Reporting</div>
+                                        <h4 class="font-semibold text-sm mb-2">Reporting & Analytics</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">OTBI report building, BI Publisher fundamentals, Smart View for Excel-based reporting, dashboard creation for business stakeholders.</p>
+                                    </div>
+                                    <div class="module-row rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-brand-accent mb-2 uppercase tracking-widest">Integration</div>
+                                        <h4 class="font-semibold text-sm mb-2">Integration & Data Migration</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">FBDI templates, HDL (HCM Data Loader) fundamentals, integration touchpoints with third-party systems — essential for any implementation project.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Live Project & Interview Prep highlight row -->
+                                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="rounded-xl p-6 border border-brand-accent/20 bg-brand-accent/5">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+                                            <span class="text-xs font-mono text-brand-accent uppercase tracking-widest">Live Project</span>
+                                        </div>
+                                        <h4 class="font-semibold text-sm mb-2">End-to-End Implementation Case Study</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Configure a business unit from scratch, migrate sample data, build a reporting dashboard, and present a working solution — modeled on a real client engagement lifecycle: requirements → configuration → testing → go-live support.</p>
+                                    </div>
+                                    <div class="rounded-xl p-6 border border-brand-dark/10 bg-brand-card-green/40">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                            <span class="text-xs font-mono text-green-700 uppercase tracking-widest">Interview Prep</span>
+                                        </div>
+                                        <h4 class="font-semibold text-sm mb-2">Placement-Focused Preparation</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Oracle Cloud-specific mock interviews, scenario-based question banks, resume positioning for Functional Consultant vs. Techno-Functional roles.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tools + Cert + Careers -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8 border-t border-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Tools You'll Work On</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Oracle Fusion Apps</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">OTBI</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">BI Publisher</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Smart View</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">FBDI/HDL Templates</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Oracle Cloud Instances</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Certification Path</h3>
+                                    <div class="flex items-start gap-3">
+                                        <span class="mt-1 w-5 h-5 rounded-full bg-brand-accent/15 flex items-center justify-center shrink-0">
+                                            <svg class="w-3 h-3 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        </span>
+                                        <p class="text-sm text-brand-text/80 leading-relaxed font-medium">Oracle Cloud Certified Implementation Specialist<span class="block text-xs text-brand-text/40 font-normal mt-0.5">Financials / HCM Track</span></p>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10 bg-brand-card-blue/20">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Career Outcomes</h3>
+                                    <ul class="space-y-2">
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent"></span>Oracle Cloud Functional Consultant</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent"></span>ERP Support Analyst</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent"></span>Oracle HCM Consultant</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent"></span>Techno-Functional Analyst</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-accent"></span>Business Process Analyst (ERP)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- FAQ + CTA -->
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8 bg-brand-bg/50">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div>
+                                        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-5">Common Questions</h3>
+                                        <div class="space-y-4">
+                                            <div class="border-b border-brand-dark/8 pb-4">
+                                                <p class="font-semibold text-sm mb-1">Do I need Oracle EBS experience first?</p>
+                                                <p class="text-sm text-brand-text/60">No — built for both EBS professionals transitioning to Cloud and complete beginners. You start from fundamentals.</p>
+                                            </div>
+                                            <div class="border-b border-brand-dark/8 pb-4">
+                                                <p class="font-semibold text-sm mb-1">Is this Financials-focused or HCM-focused?</p>
+                                                <p class="text-sm text-brand-text/60">Both core tracks are covered. You specialize further in your live project based on your career goal.</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold text-sm mb-1">Will I get hands-on system access?</p>
+                                                <p class="text-sm text-brand-text/60">Yes — every learner works in a live Oracle Cloud training instance, not just recorded demos.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col justify-between gap-6">
+                                        <div class="rounded-2xl bg-brand-dark text-brand-light p-6">
+                                            <p class="font-primary text-2xl font-light mb-3">Ready to start?</p>
+                                            <p class="text-sm text-brand-light/60 mb-5">Attend a free demo session — no commitment, no fees.</p>
+                                            <a href="#consult" class="inline-flex items-center gap-2 bg-brand-light text-brand-dark rounded-full px-5 py-2.5 text-sm font-semibold hover:bg-white transition">
+                                                Book Free Demo <span class="text-brand-accent">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── COURSE 2: SAP MM ── -->
+                <div id="sap" class="course-card rounded-2xl border border-brand-dark/10 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300" data-animation-on-scroll="">
+                    <button class="course-toggle w-full text-left" data-card="sap">
+                        <div class="p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+                            <!-- SAP Brand Logo -->
+                            <div class="shrink-0 w-24 h-16 rounded-2xl flex items-center justify-center overflow-hidden bg-white border border-gray-100" style="padding:8px;">
+                                <img src="sap-logo.png" alt="SAP" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="tag-pill">Supply Chain</span>
+                                    <span class="text-xs font-mono text-brand-text/40 uppercase tracking-widest">10–12 Weeks</span>
+                                </div>
+                                <h2 class="font-primary text-3xl md:text-4xl font-light tracking-tight leading-tight">SAP MM Training</h2>
+                                <p class="mt-2 text-brand-text/60 text-base font-medium">Own the procurement and inventory backbone that every manufacturing, retail, and logistics business runs on.</p>
+                            </div>
+                            <div class="flex items-center gap-6 shrink-0">
+                                <div class="hidden md:flex flex-col gap-1 text-right">
+                                    <span class="text-xs text-brand-text/40 font-mono uppercase tracking-widest">Format</span>
+                                    <span class="text-sm font-medium">Classroom · Online · Weekend</span>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-brand-bg border border-brand-dark/10 flex items-center justify-center shrink-0">
+                                    <svg class="course-chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                    <div class="course-body" id="body-sap">
+                        <div class="border-t border-brand-dark/8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Who Should Join</h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-yellow-500 shrink-0"></span>Supply chain, procurement, warehouse & logistics professionals</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-yellow-500 shrink-0"></span>SAP ECC MM consultants upgrading to S/4HANA</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-yellow-500 shrink-0"></span>Commerce/operations graduates targeting SAP consultant roles</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-yellow-500 shrink-0"></span>Existing SAP functional consultants adding MM as a specialization</li>
+                                    </ul>
+                                </div>
+                                <div class="p-8 md:p-10 bg-brand-card-yellow/30">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Eligibility</h3>
+                                    <p class="text-sm text-brand-text/80 leading-relaxed">Any graduate. A background in procurement, logistics, inventory, or operations is helpful but not required.</p>
+                                    <div class="mt-6 pt-6 border-t border-brand-dark/8">
+                                        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-3">Batch Options</h3>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Classroom</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Live Online</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Weekend Batches</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8">
+                                <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-6">Curriculum Overview</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-yellow-600 mb-2 uppercase tracking-widest">Foundation</div>
+                                        <h4 class="font-semibold text-sm mb-2">S/4HANA & MM Fundamentals</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">S/4HANA architecture overview, Fiori launchpad navigation, organizational structure in MM (client, company code, plant, storage location, purchasing org).</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-yellow-600 mb-2 uppercase tracking-widest">Master Data</div>
+                                        <h4 class="font-semibold text-sm mb-2">Master Data in MM</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Material master (views, types, industry sectors), vendor master data, purchasing info records, source lists, condition records for pricing.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-yellow-600 mb-2 uppercase tracking-widest">Procurement</div>
+                                        <h4 class="font-semibold text-sm mb-2">Procure-to-Pay Cycle</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Purchase requisitions, RFQ & quotation comparison, PO creation & release strategy, goods receipt (GR), invoice verification (MIRO) — full P2P end-to-end.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-yellow-600 mb-2 uppercase tracking-widest">Inventory</div>
+                                        <h4 class="font-semibold text-sm mb-2">Inventory Management</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Goods movements, stock types (unrestricted, quality inspection, blocked), physical inventory & cycle counting, batch management basics.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-yellow-600 mb-2 uppercase tracking-widest">Advanced</div>
+                                        <h4 class="font-semibold text-sm mb-2">Special Procurement Processes</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Subcontracting, consignment stock, stock transport orders (STO) between plants, third-party (drop-ship) processing, pipeline procurement.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-yellow-600 mb-2 uppercase tracking-widest">Finance Link</div>
+                                        <h4 class="font-semibold text-sm mb-2">Valuation & Integration</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Material valuation methods, automatic account determination, split valuation — connecting MM to FI. MM–SD & MM–WM/EWM integration touchpoints.</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="rounded-xl p-6 border border-yellow-500/20 bg-yellow-50/50">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+                                            <span class="text-xs font-mono text-yellow-700 uppercase tracking-widest">Live Project</span>
+                                        </div>
+                                        <h4 class="font-semibold text-sm mb-2">Full P2P Implementation Case Study</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Configure org structure for a simulated manufacturing client, run the complete P2P cycle, handle exceptions (returns, price variances, blocked invoices), and troubleshoot real-world errors.</p>
+                                    </div>
+                                    <div class="rounded-xl p-6 border border-brand-dark/10 bg-brand-card-green/40">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                            <span class="text-xs font-mono text-green-700 uppercase tracking-widest">Interview Prep</span>
+                                        </div>
+                                        <h4 class="font-semibold text-sm mb-2">SAP MM Mock Interviews</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">SAP MM-specific mock interviews, configuration troubleshooting scenarios, and resume building for MM Consultant roles.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8 border-t border-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Tools You'll Work On</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">SAP S/4HANA (Fiori)</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">SAP GUI</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">ME21N / ME51N</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">MIGO / MIRO</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">MB1A / MB1B</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">SAP Sandbox Access</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Certification Path</h3>
+                                    <div class="flex items-start gap-3">
+                                        <span class="mt-1 w-5 h-5 rounded-full bg-yellow-100 flex items-center justify-center shrink-0">
+                                            <svg class="w-3 h-3 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        </span>
+                                        <p class="text-sm text-brand-text/80 leading-relaxed font-medium">SAP Certified Application Associate – SAP S/4HANA<span class="block text-xs text-brand-text/40 font-normal mt-0.5">Procurement / Sourcing Track</span></p>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10 bg-brand-card-yellow/20">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Career Outcomes</h3>
+                                    <ul class="space-y-2">
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500"></span>SAP MM Consultant</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500"></span>SAP Support Analyst (Procurement/Inventory)</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500"></span>Business Process Analyst (Supply Chain)</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500"></span>Junior SAP Functional Consultant</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8 bg-brand-bg/50">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div>
+                                        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-5">Common Questions</h3>
+                                        <div class="space-y-4">
+                                            <div class="border-b border-brand-dark/8 pb-4">
+                                                <p class="font-semibold text-sm mb-1">Is this ECC or S/4HANA?</p>
+                                                <p class="text-sm text-brand-text/60">Taught on S/4HANA with Fiori — where the market has moved. ECC-to-S/4 differences are explained for learners with prior ECC exposure.</p>
+                                            </div>
+                                            <div class="border-b border-brand-dark/8 pb-4">
+                                                <p class="font-semibold text-sm mb-1">Do you cover SAP WM/EWM in depth?</p>
+                                                <p class="text-sm text-brand-text/60">Only at an integration-awareness level — WM/EWM is a separate specialization. Ask your counsellor if you want a combined track.</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold text-sm mb-1">Can I add SAP SD or FICO later?</p>
+                                                <p class="text-sm text-brand-text/60">Yes — many learners return for a cross-module add-on once they're placed. We offer flexible upgrade paths for placed learners.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col justify-between gap-6">
+                                        <div class="rounded-2xl bg-brand-dark text-brand-light p-6">
+                                            <p class="font-primary text-2xl font-light mb-3">Ready to start?</p>
+                                            <p class="text-sm text-brand-light/60 mb-5">Attend a free demo session — no commitment, no fees.</p>
+                                            <a href="#consult" class="inline-flex items-center gap-2 bg-brand-light text-brand-dark rounded-full px-5 py-2.5 text-sm font-semibold hover:bg-white transition">
+                                                Book Free Demo <span class="text-brand-accent">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── COURSE 3: AWS ── -->
+                <div id="aws" class="course-card rounded-2xl border border-brand-dark/10 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300" data-animation-on-scroll="">
+                    <button class="course-toggle w-full text-left" data-card="aws">
+                        <div class="p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+                            <!-- AWS Brand Logo -->
+                            <div class="shrink-0 w-28 h-16 rounded-2xl flex items-center justify-center overflow-hidden bg-white border border-gray-100" style="padding:8px;">
+                                <img src="aws-logo.png" alt="Amazon Web Services" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="tag-pill">Cloud Infrastructure</span>
+                                    <span class="text-xs font-mono text-brand-text/40 uppercase tracking-widest">14–16 Weeks</span>
+                                </div>
+                                <h2 class="font-primary text-3xl md:text-4xl font-light tracking-tight leading-tight">AWS Training</h2>
+                                <p class="mt-2 text-brand-text/60 text-base font-medium">Go from "I've heard of the cloud" to deploying and securing real infrastructure on it.</p>
+                            </div>
+                            <div class="flex items-center gap-6 shrink-0">
+                                <div class="hidden md:flex flex-col gap-1 text-right">
+                                    <span class="text-xs text-brand-text/40 font-mono uppercase tracking-widest">Format</span>
+                                    <span class="text-sm font-medium">Classroom · Online · Weekend</span>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-brand-bg border border-brand-dark/10 flex items-center justify-center shrink-0">
+                                    <svg class="course-chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                    <div class="course-body" id="body-aws">
+                        <div class="border-t border-brand-dark/8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Who Should Join</h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span>IT professionals, system admins & developers moving into cloud infrastructure roles</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span>Freshers with a computer science or IT background</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span>Anyone preparing for AWS certification exams</li>
+                                    </ul>
+                                </div>
+                                <div class="p-8 md:p-10 bg-orange-50/40">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Eligibility</h3>
+                                    <p class="text-sm text-brand-text/80 leading-relaxed">Basic IT/networking familiarity is helpful, not mandatory. No coding experience required.</p>
+                                    <div class="mt-6 pt-6 border-t border-brand-dark/8">
+                                        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-3">Batch Options</h3>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Classroom</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Live Online</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Weekend Batches</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8">
+                                <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-6">Curriculum Overview</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-orange-600 mb-2 uppercase tracking-widest">Foundation</div>
+                                        <h4 class="font-semibold text-sm mb-2">Cloud & AWS Fundamentals</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">What cloud actually solves, AWS global infrastructure (regions, AZs, edge locations), pricing models, shared responsibility model, AWS Free Tier setup.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-orange-600 mb-2 uppercase tracking-widest">Security</div>
+                                        <h4 class="font-semibold text-sm mb-2">Identity & Access Management</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Users, groups, roles & policies; least-privilege access design; MFA setup; IAM best practices used in real production environments.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-orange-600 mb-2 uppercase tracking-widest">Compute</div>
+                                        <h4 class="font-semibold text-sm mb-2">Compute Services</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">EC2 instance types & pricing (On-Demand, Reserved, Spot), AMIs, Auto Scaling Groups, Elastic Load Balancing, Lambda fundamentals.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-orange-600 mb-2 uppercase tracking-widest">Storage</div>
+                                        <h4 class="font-semibold text-sm mb-2">Storage Services</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">S3 (buckets, storage classes, lifecycle, versioning), EBS volumes & snapshots, EFS overview, backup and disaster-recovery basics.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-orange-600 mb-2 uppercase tracking-widest">Networking</div>
+                                        <h4 class="font-semibold text-sm mb-2">VPC & Networking</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">VPC design (subnets, route tables, internet/NAT gateways), security groups vs. network ACLs, VPC peering, connectivity troubleshooting.</p>
+                                    </div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8">
+                                        <div class="text-xs font-mono text-orange-600 mb-2 uppercase tracking-widest">Databases & Monitoring</div>
+                                        <h4 class="font-semibold text-sm mb-2">Databases, Monitoring & Security</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">RDS (Multi-AZ, read replicas), DynamoDB fundamentals, CloudWatch metrics & alarms, AWS Budgets, CloudTrail audit logging, Well-Architected Framework.</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="rounded-xl p-6 border border-orange-500/20 bg-orange-50/50">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+                                            <span class="text-xs font-mono text-orange-700 uppercase tracking-widest">Live Project</span>
+                                        </div>
+                                        <h4 class="font-semibold text-sm mb-2">Multi-Tier Web App Deployment</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Deploy & secure a real multi-tier web app: VPC design, EC2 behind a load balancer, RDS backend, S3 for static assets, scoped IAM roles, monitoring & cost alerts — built around real failure scenarios.</p>
+                                    </div>
+                                    <div class="rounded-xl p-6 border border-brand-dark/10 bg-brand-card-green/40">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                            <span class="text-xs font-mono text-green-700 uppercase tracking-widest">Certification Prep</span>
+                                        </div>
+                                        <h4 class="font-semibold text-sm mb-2">AWS Exam Strategy</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Practice tests & strategy for AWS Certified Cloud Practitioner and AWS Certified Solutions Architect – Associate exams.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8 border-t border-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Tools You'll Work On</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">AWS Console</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">AWS CLI</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">EC2 / S3 / VPC</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">IAM / RDS</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">DynamoDB / Lambda</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">CloudWatch / CloudTrail</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Certification Path</h3>
+                                    <div class="flex flex-col gap-3">
+                                        <div class="flex items-start gap-3">
+                                            <span class="mt-1 w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                                            <p class="text-sm font-medium">AWS Certified Cloud Practitioner</p>
+                                        </div>
+                                        <div class="flex items-center gap-2 ml-2 text-brand-text/30 text-xs font-mono">↓ then</div>
+                                        <div class="flex items-start gap-3">
+                                            <span class="mt-1 w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                                            <p class="text-sm font-medium">AWS Certified Solutions Architect – Associate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10 bg-orange-50/20">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Career Outcomes</h3>
+                                    <ul class="space-y-2">
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span>Cloud Support Engineer</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span>AWS Administrator</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span>Junior Solutions Architect</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span>DevOps Associate (entry-level)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8 bg-brand-bg/50">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div>
+                                        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-5">Common Questions</h3>
+                                        <div class="space-y-4">
+                                            <div class="border-b border-brand-dark/8 pb-4">
+                                                <p class="font-semibold text-sm mb-1">Do I need coding experience?</p>
+                                                <p class="text-sm text-brand-text/60">No — this track is infrastructure-focused. Basic scripting (Bash/Python) is introduced but is not a prerequisite.</p>
+                                            </div>
+                                            <div class="border-b border-brand-dark/8 pb-4">
+                                                <p class="font-semibold text-sm mb-1">Will I get real AWS account access?</p>
+                                                <p class="text-sm text-brand-text/60">Yes — using AWS Free Tier accounts with guardrails so your labs don't run up unexpected costs.</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold text-sm mb-1">Which certification should I target first?</p>
+                                                <p class="text-sm text-brand-text/60">Cloud Practitioner if you're new to cloud; Solutions Architect – Associate if you already have IT infrastructure experience. Your counsellor will help you decide.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col justify-between gap-6">
+                                        <div class="rounded-2xl bg-brand-dark text-brand-light p-6">
+                                            <p class="font-primary text-2xl font-light mb-3">Ready to start?</p>
+                                            <p class="text-sm text-brand-light/60 mb-5">Attend a free demo session — no commitment, no fees.</p>
+                                            <a href="#consult" class="inline-flex items-center gap-2 bg-brand-light text-brand-dark rounded-full px-5 py-2.5 text-sm font-semibold hover:bg-white transition">
+                                                Book Free Demo <span class="text-brand-accent">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── COURSE 4: AZURE ── -->
+                <div id="azure" class="course-card rounded-2xl border border-brand-dark/10 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300" data-animation-on-scroll="">
+                    <button class="course-toggle w-full text-left" data-card="azure">
+                        <div class="p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+                            <!-- Azure Brand Logo -->
+                            <div class="shrink-0 w-24 h-16 rounded-2xl flex items-center justify-center overflow-hidden bg-white border border-gray-100" style="padding:8px;">
+                                <img src="azure-logo.svg" alt="Microsoft Azure" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="tag-pill">Cloud Infrastructure</span>
+                                    <span class="text-xs font-mono text-brand-text/40 uppercase tracking-widest">14–16 Weeks</span>
+                                </div>
+                                <h2 class="font-primary text-3xl md:text-4xl font-light tracking-tight leading-tight">Azure Training</h2>
+                                <p class="mt-2 text-brand-text/60 text-base font-medium">Administer and architect Microsoft's cloud — the default choice for enterprises already running Windows Server and Active Directory.</p>
+                            </div>
+                            <div class="flex items-center gap-6 shrink-0">
+                                <div class="hidden md:flex flex-col gap-1 text-right">
+                                    <span class="text-xs text-brand-text/40 font-mono uppercase tracking-widest">Format</span>
+                                    <span class="text-sm font-medium">Classroom · Online · Weekend</span>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-brand-bg border border-brand-dark/10 flex items-center justify-center shrink-0">
+                                    <svg class="course-chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                    <div class="course-body" id="body-azure">
+                        <div class="border-t border-brand-dark/8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Who Should Join</h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>System admins & IT professionals with Microsoft-stack experience</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>Enterprise internal IT teams moving to hybrid cloud</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>Freshers targeting Microsoft-certified cloud roles</li>
+                                    </ul>
+                                </div>
+                                <div class="p-8 md:p-10 bg-blue-50/40">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Eligibility</h3>
+                                    <p class="text-sm text-brand-text/80 leading-relaxed">Basic Windows Server / networking familiarity is helpful but not mandatory.</p>
+                                    <div class="mt-6 pt-6 border-t border-brand-dark/8">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Classroom</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Live Online</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Weekend Batches</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8">
+                                <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-6">Curriculum Overview</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-blue-600 mb-2 uppercase tracking-widest">Foundation</div><h4 class="font-semibold text-sm mb-2">Azure Fundamentals</h4><p class="text-xs text-brand-text/60 leading-relaxed">Core Azure services, subscription & resource group structure, pricing calculator, Azure Portal, CLI, and PowerShell fundamentals.</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-blue-600 mb-2 uppercase tracking-widest">Identity</div><h4 class="font-semibold text-sm mb-2">Identity & Access</h4><p class="text-xs text-brand-text/60 leading-relaxed">Azure AD (Entra ID), users & groups, RBAC, Conditional Access basics, Multi-Factor Authentication setup.</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-blue-600 mb-2 uppercase tracking-widest">Compute</div><h4 class="font-semibold text-sm mb-2">Compute & Storage</h4><p class="text-xs text-brand-text/60 leading-relaxed">Virtual Machines (sizing, availability sets/zones), Storage Accounts & Blob tiers, Azure Disks, VM scale sets basics.</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-blue-600 mb-2 uppercase tracking-widest">Networking</div><h4 class="font-semibold text-sm mb-2">Azure Networking</h4><p class="text-xs text-brand-text/60 leading-relaxed">VNets & subnets, Network Security Groups (NSGs), Load Balancers & Application Gateway overview, VNet peering.</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-blue-600 mb-2 uppercase tracking-widest">Governance</div><h4 class="font-semibold text-sm mb-2">Resource Management</h4><p class="text-xs text-brand-text/60 leading-relaxed">Resource Groups & tagging, ARM templates & IaC basics, Azure Policy & Management Groups for governance at enterprise scale.</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-blue-600 mb-2 uppercase tracking-widest">Ops</div><h4 class="font-semibold text-sm mb-2">Monitoring, Backup & Security</h4><p class="text-xs text-brand-text/60 leading-relaxed">Azure Monitor & Log Analytics, alerts, Cost Management + Budgets, Azure Backup & Site Recovery, Defender for Cloud overview.</p></div>
+                                </div>
+                                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="rounded-xl p-6 border border-blue-500/20 bg-blue-50/50">
+                                        <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span class="text-xs font-mono text-blue-700 uppercase tracking-widest">Live Project</span></div>
+                                        <h4 class="font-semibold text-sm mb-2">Enterprise Azure Environment</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Deploy a secure, scalable Azure environment: VNet architecture, VM behind a load balancer, RBAC configured, monitoring & budget alerts, backup policy applied — modeled on a real enterprise IT production setup.</p>
+                                    </div>
+                                    <div class="rounded-xl p-6 border border-brand-dark/10 bg-brand-card-green/40">
+                                        <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-green-500"></span><span class="text-xs font-mono text-green-700 uppercase tracking-widest">Certification Prep</span></div>
+                                        <h4 class="font-semibold text-sm mb-2">AZ-104 & AZ-305 Strategy</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Exam strategy for AZ-104 (Azure Administrator Associate) and an intro to AZ-305 (Azure Solutions Architect Expert) for learners aiming higher.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8 border-t border-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Tools You'll Work On</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Azure Portal</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Azure CLI</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Azure PowerShell</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Virtual Machines</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Azure AD / Entra ID</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">ARM Templates</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Certification Path</h3>
+                                    <div class="flex flex-col gap-3">
+                                        <div class="flex items-start gap-3"><span class="mt-1 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span><p class="text-sm font-medium">AZ-104: Azure Administrator Associate</p></div>
+                                        <div class="flex items-center gap-2 ml-2 text-brand-text/30 text-xs font-mono">↓ then</div>
+                                        <div class="flex items-start gap-3"><span class="mt-1 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span><p class="text-sm font-medium">AZ-305: Azure Solutions Architect Expert</p></div>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10 bg-blue-50/20">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Career Outcomes</h3>
+                                    <ul class="space-y-2">
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-blue-500"></span>Azure Administrator</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-blue-500"></span>Cloud Support Engineer</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-blue-500"></span>Junior Cloud Architect</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-blue-500"></span>IT Infrastructure Engineer (Cloud)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8 bg-brand-bg/50">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div>
+                                        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-5">Common Questions</h3>
+                                        <div class="space-y-4">
+                                            <div class="border-b border-brand-dark/8 pb-4"><p class="font-semibold text-sm mb-1">Is this useful if my company already uses AWS?</p><p class="text-sm text-brand-text/60">Yes — many enterprises run hybrid or multi-cloud, and Azure administration skills are independently in demand.</p></div>
+                                            <div class="border-b border-brand-dark/8 pb-4"><p class="font-semibold text-sm mb-1">Do you cover Azure DevOps / CI-CD pipelines?</p><p class="text-sm text-brand-text/60">At an overview level only — this course focuses on administration and architecture, not full DevOps engineering.</p></div>
+                                            <div><p class="font-semibold text-sm mb-1">What's the difference between AZ-104 and AZ-305?</p><p class="text-sm text-brand-text/60">AZ-104 is hands-on administration (day-to-day ops); AZ-305 is architecture-level design. Most learners start with AZ-104.</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col justify-between gap-6">
+                                        <div class="rounded-2xl bg-brand-dark text-brand-light p-6">
+                                            <p class="font-primary text-2xl font-light mb-3">Ready to start?</p>
+                                            <p class="text-sm text-brand-light/60 mb-5">Attend a free demo session — no commitment, no fees.</p>
+                                            <a href="#consult" class="inline-flex items-center gap-2 bg-brand-light text-brand-dark rounded-full px-5 py-2.5 text-sm font-semibold hover:bg-white transition">Book Free Demo <span class="text-brand-accent">→</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── COURSE 5: DIGITAL MARKETING ── -->
+                <div id="digital" class="course-card rounded-2xl border border-brand-dark/10 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300" data-animation-on-scroll="">
+                    <button class="course-toggle w-full text-left" data-card="digital">
+                        <div class="p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+                            <!-- Digital Marketing Brand Logos -->
+                            <div class="shrink-0 w-28 h-16 rounded-2xl flex items-center justify-center gap-1.5 px-3" style="background:linear-gradient(135deg,#1877F2,#EA4335);">
+                                <!-- Google G -->
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="12" fill="white"/>
+                                    <path d="M21.5 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.3c-.2 1.2-.9 2.2-2 2.8v2.3h3.2c1.9-1.7 2.9-4.3 2.9-6.8h.1z" fill="#4285F4"/>
+                                    <path d="M12 22c2.7 0 4.9-.9 6.5-2.4l-3.2-2.3c-.9.6-2 1-3.3 1-2.5 0-4.7-1.7-5.5-4H3.2v2.4C4.8 19.9 8.1 22 12 22z" fill="#34A853"/>
+                                    <path d="M6.5 14.3c-.2-.6-.3-1.2-.3-1.8 0-.6.1-1.3.3-1.8V8.3H3.2C2.4 9.8 2 11.3 2 13c0 1.7.4 3.2 1.2 4.7l3.3-2.4z" fill="#FBBC05"/>
+                                    <path d="M12 6.6c1.4 0 2.6.5 3.6 1.4l2.7-2.7C16.9 3.9 14.7 3 12 3 8.1 3 4.8 5.1 3.2 8.3l3.3 2.4C7.3 8.3 9.5 6.6 12 6.6z" fill="#EA4335"/>
+                                </svg>
+                                <!-- Meta f -->
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+                                    <path d="M15.5 8H13.5c-.6 0-.5.4-.5 1v1.5H15l-.3 2H13V18h-2.5v-5.5h-1.5V10h1.5V9c0-2 1.2-3 3-3h2v2z" fill="white"/>
+                                </svg>
+                                <span class="text-white text-xs font-bold leading-tight">Ads</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="tag-pill">Digital Marketing</span>
+                                    <span class="text-xs font-mono text-brand-text/40 uppercase tracking-widest">12–14 Weeks</span>
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1 rounded-full">✦ Includes AI Automation</span>
+                                </div>
+                                <h2 class="font-primary text-3xl md:text-4xl font-light tracking-tight leading-tight">Full Stack Digital Marketing <span class="italic">with AI Automation</span></h2>
+                                <p class="mt-2 text-brand-text/60 text-base font-medium">Run real campaigns end-to-end — and use AI tools to do the work of a full marketing team.</p>
+                            </div>
+                            <div class="flex items-center gap-6 shrink-0">
+                                <div class="hidden md:flex flex-col gap-1 text-right">
+                                    <span class="text-xs text-brand-text/40 font-mono uppercase tracking-widest">Format</span>
+                                    <span class="text-sm font-medium">Classroom · Online · Weekend</span>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-brand-bg border border-brand-dark/10 flex items-center justify-center shrink-0">
+                                    <svg class="course-chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                    <div class="course-body" id="body-digital">
+                        <div class="border-t border-brand-dark/8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Who Should Join</h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></span>Freshers with no prior marketing background — this course starts from zero</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></span>Business owners & freelancers wanting to run their own campaigns</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></span>Career switchers targeting digital marketing roles</li>
+                                        <li class="flex items-start gap-3 text-sm text-brand-text/80 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></span>Existing marketers who want to add AI-powered workflows to their skill set</li>
+                                    </ul>
+                                </div>
+                                <div class="p-8 md:p-10 bg-purple-50/40">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Eligibility</h3>
+                                    <p class="text-sm text-brand-text/80 leading-relaxed">No prior experience required. This is the most beginner-friendly track we offer — most learners start from zero.</p>
+                                    <div class="mt-6 pt-6 border-t border-brand-dark/8">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Classroom</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Live Online</span>
+                                            <span class="text-xs bg-white border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Weekend Batches</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8">
+                                <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-6">Curriculum Overview</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-purple-600 mb-2 uppercase tracking-widest">Foundation</div><h4 class="font-semibold text-sm mb-2">Digital Marketing Fundamentals</h4><p class="text-xs text-brand-text/60 leading-relaxed">The digital landscape, marketing funnels & buyer journey, setting goals & KPIs, understanding channels (organic, paid, owned, earned).</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-purple-600 mb-2 uppercase tracking-widest">Organic</div><h4 class="font-semibold text-sm mb-2">SEO — Search Engine Optimization</h4><p class="text-xs text-brand-text/60 leading-relaxed">Keyword research, on-page & technical SEO, off-page SEO & backlink strategy, local SEO for small businesses.</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-purple-600 mb-2 uppercase tracking-widest">Paid</div><h4 class="font-semibold text-sm mb-2">SEM & Google Ads</h4><p class="text-xs text-brand-text/60 leading-relaxed">Campaign structure, keyword match types & bidding, ad copywriting & extensions, conversion tracking, budget optimization & A/B testing.</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-purple-600 mb-2 uppercase tracking-widest">Social</div><h4 class="font-semibold text-sm mb-2">Social Media Marketing</h4><p class="text-xs text-brand-text/60 leading-relaxed">Strategy across Meta (Facebook/Instagram), LinkedIn & short-form video; organic vs. paid social; community management; influencer collaboration basics.</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-purple-600 mb-2 uppercase tracking-widest">Content</div><h4 class="font-semibold text-sm mb-2">Content & Email Marketing</h4><p class="text-xs text-brand-text/60 leading-relaxed">Content calendar planning, copywriting for blog/social/ad, email fundamentals (list building, segmentation, automation sequences).</p></div>
+                                    <div class="rounded-xl p-5 border border-brand-dark/8"><div class="text-xs font-mono text-purple-600 mb-2 uppercase tracking-widest">Analytics</div><h4 class="font-semibold text-sm mb-2">Analytics & Reporting</h4><p class="text-xs text-brand-text/60 leading-relaxed">Google Analytics 4 setup, goal & conversion tracking, building client-ready performance reports, interpreting data to adjust campaigns mid-flight.</p></div>
+                                </div>
+
+                                <!-- AI Automation highlight -->
+                                <div class="mt-4 rounded-2xl border border-purple-200 bg-gradient-to-br from-purple-50 to-white p-6">
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <span class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center shrink-0">
+                                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                        </span>
+                                        <div>
+                                            <span class="text-xs font-mono text-purple-700 uppercase tracking-widest block">The Differentiator Module</span>
+                                            <h4 class="font-semibold text-base">AI Automation for Marketing</h4>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                        <div class="bg-white rounded-lg p-4 border border-purple-100"><p class="text-xs font-semibold mb-1 text-purple-800">AI Content Creation</p><p class="text-xs text-brand-text/60">Generate ad copy, blog drafts & social captions using generative AI — and edit AI output so it doesn't read as generic.</p></div>
+                                        <div class="bg-white rounded-lg p-4 border border-purple-100"><p class="text-xs font-semibold mb-1 text-purple-800">AI-Assisted SEO</p><p class="text-xs text-brand-text/60">Keyword clustering and content-gap analysis using AI tools to work faster and smarter.</p></div>
+                                        <div class="bg-white rounded-lg p-4 border border-purple-100"><p class="text-xs font-semibold mb-1 text-purple-800">Workflow Automation</p><p class="text-xs text-brand-text/60">Connect tools with automation platforms (Zapier/Make-style) to auto-post content, sync leads, trigger email sequences.</p></div>
+                                        <div class="bg-white rounded-lg p-4 border border-purple-100"><p class="text-xs font-semibold mb-1 text-purple-800">AI Ad Optimization</p><p class="text-xs text-brand-text/60">AI-assisted bidding & creative testing features inside Google & Meta Ads platforms.</p></div>
+                                        <div class="bg-white rounded-lg p-4 border border-purple-100"><p class="text-xs font-semibold mb-1 text-purple-800">Chatbot & Lead Response</p><p class="text-xs text-brand-text/60">Set up a simple AI chatbot for lead capture and FAQ handling on your website or landing page.</p></div>
+                                        <div class="bg-white rounded-lg p-4 border border-purple-100"><p class="text-xs font-semibold mb-1 text-purple-800">Prompt Writing for Marketing</p><p class="text-xs text-brand-text/60">Structure prompts to get usable, on-brand AI output instead of generic placeholder text.</p></div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="rounded-xl p-6 border border-purple-500/20 bg-purple-50/50">
+                                        <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-purple-500"></span><span class="text-xs font-mono text-purple-700 uppercase tracking-widest">Live Project</span></div>
+                                        <h4 class="font-semibold text-sm mb-2">Run a Real End-to-End Campaign</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Build a landing page, set up tracking, run a paid campaign, create content with AI-assisted workflows, automate a repetitive task, and present a full performance report — modeled on real client briefs.</p>
+                                    </div>
+                                    <div class="rounded-xl p-6 border border-brand-dark/10 bg-brand-card-green/40">
+                                        <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-green-500"></span><span class="text-xs font-mono text-green-700 uppercase tracking-widest">Portfolio & Interview Prep</span></div>
+                                        <h4 class="font-semibold text-sm mb-2">Portfolio-Ready Outcomes</h4>
+                                        <p class="text-xs text-brand-text/60 leading-relaxed">Build your portfolio from live project work, prepare for marketing-executive & specialist interviews, and position your AI-automation skills as a standout differentiator on your resume.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-dark/8 border-t border-brand-dark/8">
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Tools You'll Work On</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Google Ads</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Google Analytics 4</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Meta Ads Manager</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">SEO Research Tools</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">Email Marketing Platform</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">AI Content Tools</span>
+                                        <span class="text-xs bg-brand-bg border border-brand-dark/10 rounded-full px-3 py-1.5 font-medium">No-Code Automation</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Certification Path</h3>
+                                    <div class="flex flex-col gap-3">
+                                        <div class="flex items-start gap-3"><span class="mt-1 w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span><p class="text-sm font-medium">Google Ads Certified</p></div>
+                                        <div class="flex items-start gap-3"><span class="mt-1 w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span><p class="text-sm font-medium">Google Analytics Certified</p></div>
+                                        <p class="text-xs text-brand-text/40 mt-1">Learner-obtained; course content is mapped to these exams.</p>
+                                    </div>
+                                </div>
+                                <div class="p-8 md:p-10 bg-purple-50/20">
+                                    <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-4">Career Outcomes</h3>
+                                    <ul class="space-y-2">
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-500"></span>Digital Marketing Executive</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-500"></span>SEO Analyst</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-500"></span>Social Media Manager</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-500"></span>PPC Specialist</li>
+                                        <li class="text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-500"></span>Marketing Automation Associate</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:p-10 border-t border-brand-dark/8 bg-brand-bg/50">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div>
+                                        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-brand-text/40 mb-5">Common Questions</h3>
+                                        <div class="space-y-4">
+                                            <div class="border-b border-brand-dark/8 pb-4"><p class="font-semibold text-sm mb-1">Do I need coding for the "full stack" part?</p><p class="text-sm text-brand-text/60">No — it's no-code/low-code website building, not software development. Basic HTML/CSS is taught just enough to edit pages confidently.</p></div>
+                                            <div class="border-b border-brand-dark/8 pb-4"><p class="font-semibold text-sm mb-1">Which AI tools do you teach?</p><p class="text-sm text-brand-text/60">The course teaches transferable AI-workflow skills — prompting, automation logic, AI-assisted SEO/ads — rather than locking you into one paid tool, since the landscape changes fast.</p></div>
+                                            <div><p class="font-semibold text-sm mb-1">Is this beginner-friendly?</p><p class="text-sm text-brand-text/60">Yes — most learners in this track start with zero marketing background. No prerequisites whatsoever.</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col justify-between gap-6">
+                                        <div class="rounded-2xl bg-brand-dark text-brand-light p-6">
+                                            <p class="font-primary text-2xl font-light mb-3">Ready to start?</p>
+                                            <p class="text-sm text-brand-light/60 mb-5">Attend a free demo session — no commitment, no fees.</p>
+                                            <a href="#consult" class="inline-flex items-center gap-2 bg-brand-light text-brand-dark rounded-full px-5 py-2.5 text-sm font-semibold hover:bg-white transition">Book Free Demo <span class="text-brand-accent">→</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ====== NOT SURE SECTION ====== -->
+        <section id="consult" class="bg-brand-dark text-brand-light py-24 md:py-32">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-animation-on-scroll="">
+                    <div>
+                        <span class="font-mono text-xs tracking-[0.2em] uppercase text-brand-accent mb-4 block">Free Career Consultation</span>
+                        <h2 class="font-primary text-4xl md:text-5xl font-light tracking-tight leading-tight mb-6">
+                            Not sure which<br><span class="italic">course fits you?</span>
+                        </h2>
+                        <p class="text-brand-light/60 text-lg leading-relaxed mb-8">
+                            Book a free 15-minute call with a course counsellor. Tell us your background and where you want to be in a year — we'll tell you honestly whether Beyond20 is the right fit, and which track makes the most sense for your career goals.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center gap-2 text-brand-light/50 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>No sales pressure</div>
+                            <div class="flex items-center gap-2 text-brand-light/50 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>Honest career advice</div>
+                            <div class="flex items-center gap-2 text-brand-light/50 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>15 minutes, free</div>
+                        </div>
+                    </div>
+                    <div class="bg-brand-card-dark rounded-2xl p-8 border border-white/5">
+                        <h3 class="font-primary text-2xl font-light mb-6">Book a Free Career Consultation</h3>
+                        <form class="flex flex-col gap-4" onsubmit="return false;">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="text-xs font-mono text-brand-light/40 uppercase tracking-widest mb-2 block">Your Name</label>
+                                    <input type="text" placeholder="Full name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-brand-light placeholder-brand-light/30 focus:outline-none focus:border-brand-accent transition">
+                                </div>
+                                <div>
+                                    <label class="text-xs font-mono text-brand-light/40 uppercase tracking-widest mb-2 block">Phone</label>
+                                    <input type="tel" placeholder="+91 9999 999 999" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-brand-light placeholder-brand-light/30 focus:outline-none focus:border-brand-accent transition">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="text-xs font-mono text-brand-light/40 uppercase tracking-widest mb-2 block">Course of Interest</label>
+                                <select class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-brand-light focus:outline-none focus:border-brand-accent transition" style="color: rgba(247,246,245,0.7);">
+                                    <option value="" style="background:#24151B;">Select a track...</option>
+                                    <option value="oracle" style="background:#24151B;">Oracle Cloud Fusion</option>
+                                    <option value="sap" style="background:#24151B;">SAP MM</option>
+                                    <option value="aws" style="background:#24151B;">AWS</option>
+                                    <option value="azure" style="background:#24151B;">Azure</option>
+                                    <option value="digital" style="background:#24151B;">Digital Marketing with AI</option>
+                                    <option value="unsure" style="background:#24151B;">Not Sure Yet</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-xs font-mono text-brand-light/40 uppercase tracking-widest mb-2 block">Your Background (optional)</label>
+                                <textarea rows="3" placeholder="e.g. Commerce graduate, 2 years in accounting, want to move into ERP consulting..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-brand-light placeholder-brand-light/30 focus:outline-none focus:border-brand-accent transition resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="bg-brand-accent text-white rounded-full px-6 py-3.5 text-sm font-semibold hover:bg-opacity-90 transition flex items-center justify-center gap-2">
+                                Book Free Consultation <span>→</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== GENERAL FAQ ====== -->
+        <section class="py-24 md:py-32 bg-brand-bg">
+            <div class="max-w-[1376px] mx-auto px-6 md:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16" data-animation-on-scroll="">
+                    <div class="lg:col-span-4">
+                        <span class="font-mono text-xs tracking-[0.2em] uppercase text-brand-accent mb-4 block">FAQ</span>
+                        <h2 class="font-primary text-4xl md:text-5xl font-light tracking-tight leading-tight mb-6">General Questions</h2>
+                        <p class="text-brand-text/60 leading-relaxed">Everything else you need to know before you enrol.</p>
+                    </div>
+                    <div class="lg:col-span-8 flex flex-col divide-y divide-brand-dark/10">
+                        <div class="faq-item py-6">
+                            <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left">
+                                <span class="font-semibold text-base">Can I switch courses after enrolling?</span>
+                                <svg class="faq-chevron w-5 h-5 shrink-0 text-brand-text/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div class="faq-body">
+                                <p class="pt-4 text-sm text-brand-text/60 leading-relaxed">Yes — if you join and feel a different track is a better fit, we allow a one-time course switch within the first two weeks of starting. Our counselling team will help you make an informed decision before you even enrol, so switches are rare. If you do need to switch, the process is straightforward and any fees paid are adjusted to the new course.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item py-6">
+                            <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left">
+                                <span class="font-semibold text-base">Are these courses certification-aligned?</span>
+                                <svg class="faq-chevron w-5 h-5 shrink-0 text-brand-text/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div class="faq-body">
+                                <p class="pt-4 text-sm text-brand-text/60 leading-relaxed">Yes — Oracle Cloud Fusion, SAP MM, AWS, and Azure all map to their respective official certification tracks. The Digital Marketing course maps to Google Ads and Google Analytics certifications. Our curriculum is continuously updated to reflect the latest exam objectives, and our trainers have all held these certifications themselves.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item py-6">
+                            <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left">
+                                <span class="font-semibold text-base">Do you offer EMI or installment options?</span>
+                                <svg class="faq-chevron w-5 h-5 shrink-0 text-brand-text/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div class="faq-body">
+                                <p class="pt-4 text-sm text-brand-text/60 leading-relaxed">Yes — we offer flexible installment plans to make our courses accessible. You can split your course fee into 2 or 3 installments with zero extra charges. We also partner with leading education finance providers for longer-term EMI options if you need them. Speak to our admissions team to find the plan that fits your budget.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item py-6">
+                            <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left">
+                                <span class="font-semibold text-base">Can I attend a demo class before enrolling?</span>
+                                <svg class="faq-chevron w-5 h-5 shrink-0 text-brand-text/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div class="faq-body">
+                                <p class="pt-4 text-sm text-brand-text/60 leading-relaxed">Yes, every course offers a free demo session. You'll attend an actual class — not a polished marketing presentation — so you can see exactly how we teach, meet the trainer, and ask questions before making any commitment. Just book above and we'll schedule you into the next available demo.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item py-6">
+                            <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left">
+                                <span class="font-semibold text-base">Can I combine two tracks (e.g., SAP MM + AWS)?</span>
+                                <svg class="faq-chevron w-5 h-5 shrink-0 text-brand-text/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div class="faq-body">
+                                <p class="pt-4 text-sm text-brand-text/60 leading-relaxed">Yes — we support learners who want to build a cross-functional skill set. You can enrol in a second track at a discounted rate once you're in your placement phase for the first. Our counsellors will help you sequence the tracks logically so you're not overwhelmed and your placement timeline isn't disrupted.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER (matches home.html) ====== -->
+    <footer class="bg-brand-bg pt-32 pb-12 relative z-10 border-t border-brand-dark/5 mt-20">
+        <div class="max-w-[1376px] mx-auto px-6 md:px-8 flex flex-col gap-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-4 flex flex-col gap-8">
+                    <h2 class="font-primary text-3xl md:text-4xl font-light tracking-tight">Stay connected with what actually matters</h2>
+                    <div class="relative w-full max-w-sm mt-4 group">
+                        <input type="email" placeholder="Subscribe to newsletter"
+                            class="w-full bg-transparent border-b border-brand-dark/20 py-3 pr-12 focus:outline-none focus:border-brand-dark transition placeholder:text-brand-dark/40 font-medium">
+                        <button class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-brand-bg group-hover:bg-brand-dark group-hover:text-white rounded-full flex items-center justify-center transition-colors border border-brand-dark/10 group-hover:border-brand-dark">→</button>
+                    </div>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-12 text-lg font-medium">
+                    <div class="flex flex-col gap-4">
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text mb-2 opacity-50">Beyond20</div>
+                        <a href="courses.html" class="hover:text-brand-accent transition">Courses</a>
+                        <a href="home.html#solutions" class="hover:text-brand-accent transition">Faculty</a>
+                        <a href="placements.html" class="hover:text-brand-accent transition">Placements</a>
+                        <a href="home.html#insights" class="hover:text-brand-accent transition">Blog</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text mb-2 opacity-50">About</div>
+                        <a href="#" class="hover:text-brand-accent transition">Our Story</a>
+                        <a href="home.html#insights" class="hover:text-brand-accent transition">Blog</a>
+                        <a href="#" class="hover:text-brand-accent transition">Careers</a>
+                        <a href="#consult" class="hover:text-brand-accent transition">Contact</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="font-mono text-xs tracking-wider uppercase text-brand-text mb-2 opacity-50">More</div>
+                        <a href="#" class="hover:text-brand-accent transition">Student Login</a>
+                        <a href="#consult" class="hover:text-brand-accent transition">Enroll Now</a>
+                        <a href="#" class="hover:text-brand-accent transition">Legal</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center border-t border-brand-dark/10 pt-16">
+                <div class="flex overflow-hidden w-full gap-8 opacity-[0.08] pointer-events-none select-none mb-16">
+                    <div class="flex min-w-full shrink-0 animate-marquee gap-8">
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                    </div>
+                    <div class="flex min-w-full shrink-0 animate-marquee gap-8">
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                        <span class="text-[120px] md:text-[200px] font-primary font-light whitespace-nowrap">BEYOND20</span>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-8 text-sm text-brand-text/80 font-medium">
+                    <p class="max-w-2xl leading-relaxed">Beyond20 is a training institute based in Bangalore, India, offering Oracle Cloud, SAP, AWS, Azure, and Digital Marketing training. Course details, fees, and placement figures are updated periodically — please confirm current details with our admissions team before enrolling.</p>
+                    <div class="flex flex-col items-start md:items-end gap-3 shrink-0">
+                        <div>© 2026 Beyond20. All rights reserved.</div>
+                        <div class="flex gap-6 text-brand-text/60">
+                            <a href="#" class="hover:text-brand-text transition">Refund Policy</a>
+                            <a href="#" class="hover:text-brand-text transition">Terms</a>
+                            <a href="#" class="hover:text-brand-text transition">Privacy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA (matches home.html) -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-4 bg-brand-dark text-brand-light px-2 py-2 pl-6 rounded-full shadow-2xl border border-white/10 pointer-events-auto">
+        <span class="text-sm font-medium opacity-90 hidden md:block">Ready to skill up?</span>
+        <a href="#consult" class="bg-brand-bg text-brand-dark px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white transition flex items-center gap-2">
+            Book Free Demo <span class="text-brand-accent">→</span>
+        </a>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+            el.classList.add('animate-on-scroll-hidden');
+            observer.observe(el);
+        });
+
+        // Course card expand/collapse
+        document.querySelectorAll('.course-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.course-card');
+                const cardId = btn.dataset.card;
+                const body = document.getElementById('body-' + cardId);
+                const isOpen = card.classList.contains('open');
+
+                // Close all other open cards
+                document.querySelectorAll('.course-card.open').forEach(c => {
+                    c.classList.remove('open');
+                    c.querySelector('.course-body').classList.remove('open');
+                });
+
+                // Toggle clicked card
+                if (!isOpen) {
+                    card.classList.add('open');
+                    body.classList.add('open');
+                    // Smooth scroll to card
+                    setTimeout(() => {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const body = item.querySelector('.faq-body');
+                const isOpen = item.classList.contains('open');
+
+                document.querySelectorAll('.faq-item.open').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-body').classList.remove('open');
+                });
+
+                if (!isOpen) {
+                    item.classList.add('open');
+                    body.classList.add('open');
+                }
+            });
+        });
+
+        // Filter/jump buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = document.getElementById(btn.dataset.filter);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                });
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
